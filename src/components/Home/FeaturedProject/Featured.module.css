@@ -65,7 +65,7 @@
 }
 
 .ButtonContainer {
-	margin-top: 14rem;
+	margin-top: 18rem;
 	text-align: center;
 }
 
@@ -84,4 +84,73 @@
 
 .AllProjectButton:hover.AllProjectButton .ButtonText {
 	margin-right: 1.8rem;
+}
+
+@media only screen and (max-width: 75em) {
+	.Project {
+		margin-left: 3rem;
+		margin-right: 3rem;
+		margin-top: 3rem;
+		width: 100%;
+	}
+
+	.ProjectImage {
+		width: 100%;
+		/* object-fit: cover; */
+	}
+
+	.ProjectInfo {
+		transform: translateY(-25%);
+		height: min-content;
+		padding: 2.5rem 2rem;
+	}
+
+	.ProjectInfo h5 {
+		font-size: 2.4rem;
+	}
+}
+
+@media only screen and (max-width: 37.5em) {
+	.Heading {
+		font-size: 2.8rem;
+	}
+
+	.Project {
+		margin-left: 0rem;
+		margin-right: 0rem;
+		margin-top: 3rem;
+		max-width: 100%;
+	}
+	.ProjectImage {
+		height: 20vh;
+		object-fit: cover;
+	}
+	.ProjectInfo {
+		position: relative;
+		width: 100%;
+		transform: translateY(0);
+	}
+	.ProjectInfo h5 {
+		font-size: 1.8rem;
+	}
+
+	.ProjectInfo p {
+		font-size: 1.8rem;
+	}
+
+	.ProjectInfoButton {
+		background-color: var(--background);
+		display: inline-block;
+		padding: 1.5rem 3rem;
+		font-size: 1.6rem;
+		display: flex;
+		align-items: center;
+		transform: translateX(25%);
+		width: 60vw;
+		justify-content: center;
+	}
+
+	.AllProjectButton {
+		margin-top: 3rem;
+	}
 }

@@ -32,3 +32,18 @@
 .YellowText {
 	color: var(--color-primary);
 }
+
+@media only screen and (max-width: 37.5em) {
+	.Header {
+		font-size: 1.6rem;
+	}
+
+	.TextHeading {
+		line-height: 4rem;
+	}
+
+	.Block {
+		margin-bottom: 4px;
+		height: 4rem;
+	}
+}

@@ -31,6 +31,7 @@ const FeaturedProject = ({ showProjects }) => {
 				<div>
 					<motion.img
 						animate={animation}
+						className={classes.ProjectImage}
 						ref={imageRef}
 						src={projectImage}
 						alt="My Quiz App"
@@ -53,9 +54,8 @@ const FeaturedProject = ({ showProjects }) => {
 					className={classes.ProjectInfo}
 					initial="closed"
 					variants={{
-						closed: { width: 0, opacity: 0 },
+						closed: { opacity: 0 },
 						expand: {
-							width: '55rem',
 							opacity: 1,
 							transition: {
 								duration: 1,
@@ -85,11 +85,10 @@ const FeaturedProject = ({ showProjects }) => {
 							className={classes.ProjectInfoButton}
 							initial="hidden"
 							variants={{
-								hidden: { opacity: 0, y: 100, x: '100%' },
+								hidden: { opacity: 0 },
 								slideIn: {
 									opacity: 1,
-									y: 0,
-									x: '100%',
+
 									transition: { duration: 0.5, delay: 1.8, ease: 'easeInOut' },
 								},
 							}}
