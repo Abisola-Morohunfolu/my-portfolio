@@ -1,0 +1,87 @@
+.FeaturedProject {
+	padding: 10rem 4.5rem;
+	overflow: hidden;
+}
+
+.Project {
+	margin-left: 3rem;
+	margin-top: 3rem;
+	position: relative;
+}
+
+.ProjectImage {
+	height: 100%;
+}
+
+.Heading {
+	color: var(--color-primary);
+	font-size: 3.6rem;
+}
+
+.ProjectInfo {
+	background-color: var(--color-primary);
+	width: 55rem;
+	height: 30rem;
+	padding: 4rem 3.5rem;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+.ProjectName {
+	color: var(--background);
+	font-size: 3rem;
+	font-weight: 800;
+}
+
+.ProjectInfo p {
+	font-size: 2.4rem;
+	font-family: var(--secondary-font);
+	color: var(--background);
+	width: 80%;
+
+	margin: 2rem 0;
+	line-height: 3rem;
+}
+
+.ProjectInfoButton {
+	background-color: var(--background);
+	display: inline-block;
+	padding: 1.5rem 3rem;
+	font-size: 2.4rem;
+	display: flex;
+	align-items: center;
+	transform: translateX(100%);
+	transition: all 0.4s ease-in-out;
+}
+
+.ProjectInfoButton h5 {
+	margin-right: 1rem;
+	transition: all 0.4s ease-in-out;
+}
+
+.ProjectInfoButton:hover.ProjectInfoButton h5 {
+	margin-right: 1.5rem;
+}
+
+.ButtonContainer {
+	margin-top: 14rem;
+	text-align: center;
+}
+
+.AllProjectButton {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px var(--color-primary) solid;
+	padding-top: 5px;
+}
+
+.ButtonText {
+	font-size: 2.4rem;
+	margin-right: 1rem;
+	transition: all 0.4s ease-in-out;
+}
+
+.AllProjectButton:hover.AllProjectButton .ButtonText {
+	margin-right: 1.8rem;
+}

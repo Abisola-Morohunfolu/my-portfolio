@@ -2,7 +2,7 @@ import Button from '../../../UI/Button/button';
 import * as classes from './navbar.module.css';
 import { motion } from 'framer-motion';
 
-const navbar = () => (
+const navbar = ({ showMenu }) => (
 	<nav className={classes.Navbar}>
 		<motion.h1
 			className={classes.Heading}
@@ -12,7 +12,7 @@ const navbar = () => (
 		>
 			abisola
 		</motion.h1>
-		<Button>
+		<Button clicked={showMenu}>
 			<motion.h1
 				className={classes.Heading}
 				initial={{ opacity: 0, scale: 0.8 }}

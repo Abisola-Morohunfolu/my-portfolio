@@ -1,5 +1,6 @@
 .Menu {
 	position: fixed;
+	z-index: 20;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -9,6 +10,16 @@
 	background-color: var(--background);
 	text-align: center;
 	padding: 3rem 4.5rem;
+}
+
+.Background {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: var(--color-primary);
 }
 
 .TopBar {

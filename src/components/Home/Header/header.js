@@ -29,6 +29,16 @@ const header = () => {
 						initial="initial"
 						animate="animate"
 					>
+						Hello!
+					</motion.span>{' '}
+				</div>
+				<div className={classes.Block}>
+					<motion.span
+						className={classes.SpanBlock}
+						variants={spanAnimate}
+						initial="initial"
+						animate="animate"
+					>
 						I am <span className={classes.YellowText}>Abisola,</span>
 					</motion.span>{' '}
 				</div>
