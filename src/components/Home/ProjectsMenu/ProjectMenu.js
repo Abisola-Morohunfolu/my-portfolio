@@ -7,6 +7,32 @@ import ProjectItem from './ProjectItem/ProjectItem';
 import Button from '../../UI/Button/button';
 
 const projectMenu = ({ menuState, closeMenu }) => {
+	const container = {
+		show: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				delayChildren: 0.7,
+				staggerChildren: 0.35,
+				ease: [0.83, 0, 0.17, 1],
+			},
+		},
+		hide: {
+			opacity: 0,
+			y: '100%',
+			scale: 1.15,
+		},
+	};
+
+	const children = {
+		show: { opacity: 1, y: 0, scale: 1 },
+		hide: {
+			opacity: 0,
+			y: '100%',
+			scale: 1.15,
+		},
+	};
 	return (
 		<>
 			<AnimatePresence>
@@ -39,17 +65,23 @@ const projectMenu = ({ menuState, closeMenu }) => {
 									<h4 className={classes.TextHeading}>close</h4>
 								</Button>
 							</div>
-							<div className={classes.ListContainer}>
+							<motion.div
+								className={classes.ListContainer}
+								initial="hide"
+								variants={container}
+								animate="show"
+							>
 								{Projects.map((item) => (
-									<Link t0="/" key={item.id + item.title}>
+									<Link t0="/" key={item.id + item.title} variants={children}>
 										<ProjectItem
 											number={item.orderNo}
 											name={item.title}
 											key={item.id + item.title}
+											variants={children}
 										/>
 									</Link>
 								))}
-							</div>
+							</motion.div>
 						</motion.div>
 					</motion.div>
 				)}
