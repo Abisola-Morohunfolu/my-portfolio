@@ -29,18 +29,20 @@ body {
 	font-family: var(--primary-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--background);
+	color: #fff;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	body {
 		background-color: var(--background);
 		color: #fff;
 	}
-}
+} */
 
 @media only screen and (max-width: 75em) {
 	html {
