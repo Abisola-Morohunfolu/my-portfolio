@@ -186,4 +186,9 @@
 	.AllProjectButton {
 		margin-top: 3rem;
 	}
+
+	.ButtonContainer {
+		margin-top: 8rem;
+		text-align: center;
+	}
 }

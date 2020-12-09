@@ -14,7 +14,7 @@ const projectMenu = ({ menuState, closeMenu }) => {
 			scale: 1,
 			transition: {
 				delayChildren: 0.7,
-				staggerChildren: 0.35,
+				staggerChildren: 0.25,
 				ease: [0.83, 0, 0.17, 1],
 			},
 		},
