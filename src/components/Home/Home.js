@@ -4,7 +4,7 @@ import Navbar from './Header/Navbar/navbar';
 import Header from './Header/header';
 import ProjectMenu from './ProjectsMenu/ProjectMenu';
 import FeaturedProject from './FeaturedProject/FeaturedProject';
-import { motion } from 'framer-motion';
+
 
 const Home = () => {
 	const [toggleMenu, setToggleMenu] = React.useState(false);
