@@ -3,10 +3,11 @@
 	place-items: center;
 	place-content: center;
 	text-align: center;
-	height: 85vh;
+	height: 90vh;
 	padding: 2rem;
 	position: relative;
 	font-size: 3.6rem;
+	scroll-snap-align: start;
 }
 
 .TextHeading {

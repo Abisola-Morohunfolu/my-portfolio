@@ -1,12 +1,33 @@
 .FeaturedProject {
-	padding: 10rem 4.5rem;
+	padding: 5rem 4.5rem 5rem;
+	scroll-snap-type: y mandatory;
 	overflow: hidden;
+	scroll-behavior: auto;
+	scroll-snap-align: start;
+	/* scroll-padding: -5rem; */
 }
 
 .Project {
 	margin-left: 3rem;
 	margin-top: 3rem;
 	position: relative;
+
+	/* scroll-padding: -5rem; */
+}
+
+.ImageContainer {
+	position: relative;
+	scroll-snap-align: start;
+}
+
+.ImageCover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--background);
+	width: 100%;
+	height: 100%;
+	z-index: 200;
 }
 
 .ProjectImage {
@@ -26,6 +47,7 @@
 	position: absolute;
 	top: 50%;
 	right: 0;
+	/* z-index: 10; */
 }
 
 .ProjectName {
@@ -53,6 +75,17 @@
 	align-items: center;
 	transform: translateX(100%);
 	transition: all 0.4s ease-in-out;
+}
+
+.ProjectInfoCover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: var(--background);
+	width: 100%;
+	height: 100%;
+	z-index: 20;
 }
 
 .ProjectInfoButton h5 {
@@ -145,8 +178,8 @@
 		font-size: 1.6rem;
 		display: flex;
 		align-items: center;
-		transform: translateX(25%);
-		width: 60vw;
+		transform: translateX(50%);
+		width: 50vw;
 		justify-content: center;
 	}
 

@@ -12,15 +12,14 @@ const FeaturedProject = ({ showProjects }) => {
 	const animation = useAnimation();
 	const [imageRef, imageInView] = useInView({
 		triggerOnce: true,
-		rootMargin: '-295px',
+		rootMargin: '-100px',
 	});
 
 	React.useEffect(() => {
 		if (imageInView) {
 			animation.start('scaleDown');
 			animation.start('expand');
-			animation.start('showText');
-			animation.start('slideIn');
+			animation.start('show');
 		}
 	}, [animation, imageInView]);
 
@@ -28,74 +27,68 @@ const FeaturedProject = ({ showProjects }) => {
 		<section className={classes.FeaturedProject}>
 			<h3 className={classes.Heading}>Featured Project</h3>
 			<div className={classes.Project}>
-				<div>
-					<motion.img
+				<div className={classes.ImageContainer} ref={imageRef}>
+					<motion.div
 						animate={animation}
-						className={classes.ProjectImage}
-						ref={imageRef}
-						src={projectImage}
-						alt="My Quiz App"
+						className={classes.ImageCover}
 						initial="initial"
 						variants={{
-							initial: { scale: 1.2, opacity: 0 },
+							initial: { width: '100%', left: 0 },
 							scaleDown: {
-								scale: 1,
-								opacity: 1,
+								width: 0,
+								left: '100%',
+
 								transition: {
-									duration: 1,
-									ease: [0.6, 0.05, -0.04, 0.9],
+									duration: 1.3,
+									ease: [0.37, 0, 0.63, 1],
 								},
 							},
 						}}
-					/>
+					></motion.div>
+					<img className={classes.ProjectImage} src={projectImage} alt="My Quiz App" />
 				</div>
 				<motion.div
-					animate={animation}
 					className={classes.ProjectInfo}
-					initial="closed"
+					animate={animation}
+					initial="hide"
 					variants={{
-						closed: { opacity: 0 },
-						expand: {
+						hide: { opacity: 0 },
+						show: {
 							opacity: 1,
 							transition: {
-								duration: 1,
-								delay: 1.4,
-								ease: [0.6, 0.05, -0.01, 0.9],
+								duration: 0.5,
+								delay: 0.7,
+								ease: [0.5, 0, 0.75, 0],
 							},
 						},
 					}}
 				>
-					<h5 className={classes.ProjectName}>Quiz App</h5>
-					<motion.p
+					<motion.div
+						className={classes.ProjectInfoCover}
 						animate={animation}
-						initial="hideText"
+						initial="initial"
 						variants={{
-							hideText: { opacity: 0, y: 100 },
-							showText: {
-								opacity: 1,
-								y: 0,
-								transition: { duration: 0.5, delay: 1.7, ease: 'easeInOut' },
+							initial: { height: '100%', top: 0 },
+							expand: {
+								height: 0,
+								top: '100%',
+								transition: {
+									duration: 0.7,
+									delay: 0.7,
+									ease: [0.5, 0, 0.75, 0],
+								},
 							},
 						}}
-					>
+					></motion.div>
+					<h5 className={classes.ProjectName}>Quiz App</h5>
+					<p>
 						A fun Quiz App to help improve your knowledge of the world and other fascinating topics
-					</motion.p>
+					</p>
 					<Button>
-						<motion.div
-							className={classes.ProjectInfoButton}
-							initial="hidden"
-							variants={{
-								hidden: { opacity: 0 },
-								slideIn: {
-									opacity: 1,
-
-									transition: { duration: 0.5, delay: 1.8, ease: 'easeInOut' },
-								},
-							}}
-						>
+						<div className={classes.ProjectInfoButton}>
 							<h5>Read More</h5>
 							<RightArrow />
-						</motion.div>
+						</div>
 					</Button>
 				</motion.div>
 				<div className={classes.ButtonContainer}>
