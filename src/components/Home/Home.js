@@ -4,7 +4,7 @@ import Navbar from './Header/Navbar/navbar';
 import Header from './Header/header';
 import ProjectMenu from './ProjectsMenu/ProjectMenu';
 import FeaturedProject from './FeaturedProject/FeaturedProject';
-
+import About from './About/About';
 
 const Home = () => {
 	const [toggleMenu, setToggleMenu] = React.useState(false);
@@ -17,6 +17,7 @@ const Home = () => {
 			<Header />
 			<ProjectMenu menuState={toggleMenu} closeMenu={hideMenu} />
 			<FeaturedProject showProjects={showMenu} />
+			<About />
 		</>
 	);
 };

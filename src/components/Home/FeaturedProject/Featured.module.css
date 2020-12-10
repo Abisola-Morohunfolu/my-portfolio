@@ -1,8 +1,6 @@
 .FeaturedProject {
 	padding: 5rem 4.5rem 5rem;
-	scroll-snap-type: y mandatory;
 	overflow: hidden;
-	scroll-behavior: auto;
 	scroll-snap-align: start;
 	/* scroll-padding: -5rem; */
 }
@@ -17,7 +15,7 @@
 
 .ImageContainer {
 	position: relative;
-	scroll-snap-align: start;
+	/* scroll-snap-align: start; */
 }
 
 .ImageCover {
@@ -41,9 +39,10 @@
 
 .ProjectInfo {
 	background-color: var(--color-primary);
-	width: 55rem;
-	height: 30rem;
-	padding: 4rem 3.5rem;
+	width: 50rem;
+	height: min-content;
+	max-height: 30rem;
+	padding: 2rem 1.5rem;
 	position: absolute;
 	top: 50%;
 	right: 0;
@@ -141,6 +140,10 @@
 	.ProjectInfo h5 {
 		font-size: 2.4rem;
 	}
+
+	.ProjectInfoButton {
+		transform: translateX(80%);
+	}
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -172,15 +175,22 @@
 	}
 
 	.ProjectInfoButton {
-		background-color: var(--background);
-		display: inline-block;
-		padding: 1.5rem 3rem;
-		font-size: 1.6rem;
+		padding: 1.2rem 1.5rem;
 		display: flex;
 		align-items: center;
-		transform: translateX(50%);
-		width: 50vw;
+		transform: translateX(60%);
+		width: 45vw;
 		justify-content: center;
+	}
+
+	.ProjectInfoButton h5,
+	.AllProjectButton h5 {
+		font-size: 1.6rem;
+		margin-right: 1.4rem;
+	}
+
+	.Project svg {
+		width: 2.4rem;
 	}
 
 	.AllProjectButton {

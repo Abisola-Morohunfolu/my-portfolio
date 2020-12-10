@@ -33,7 +33,7 @@ const FeaturedProject = ({ showProjects }) => {
 						className={classes.ImageCover}
 						initial="initial"
 						variants={{
-							initial: { width: '100%', left: 0 },
+							initial: { width: '120%', left: 0 },
 							scaleDown: {
 								width: 0,
 								left: '100%',
