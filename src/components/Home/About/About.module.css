@@ -2,7 +2,7 @@
 	padding: 5rem 4.5rem 5rem;
 	overflow: hidden;
 	scroll-snap-align: start;
-	height: 100vh;
+	min-height: 90vh;
 }
 
 .Heading {
