@@ -6,15 +6,21 @@
 }
 
 .Project {
-	margin-left: 3rem;
+	display: flex;
+	margin-left: 7rem;
 	margin-top: 3rem;
 	position: relative;
+	height: 60vh;
+	max-width: 80vw;
+	/* background-color: var(--color-primary); */
 
 	/* scroll-padding: -5rem; */
 }
 
 .ImageContainer {
 	position: relative;
+	flex: 1.8;
+	height: 100%;
 	/* scroll-snap-align: start; */
 }
 
@@ -30,6 +36,9 @@
 
 .ProjectImage {
 	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
 }
 
 .Heading {
@@ -39,40 +48,60 @@
 
 .ProjectInfo {
 	background-color: var(--color-primary);
-	width: 50rem;
-	height: min-content;
-	max-height: 30rem;
+	flex: 1;
+	height: 100%;
+	width: 100%;
+	/* max-height: 30rem; */
 	padding: 2rem 1.5rem;
-	position: absolute;
-	top: 50%;
-	right: 0;
+	position: relative;
+
 	/* z-index: 10; */
 }
 
+.ProjectInfoText {
+	background-color: var(--background);
+	padding: 6rem 3rem;
+	width: 100%;
+	transform: translate(-25%, 10%);
+	/* width: 100%; */
+	/* position: absolute;
+	top: 15%;
+	left: -20%;
+	right: 0%; */
+}
+
+.ProjectInfoText a {
+	text-decoration: none;
+	color: var(--color-primary);
+}
+
 .ProjectName {
-	color: var(--background);
+	color: var(--color-primary);
 	font-size: 3rem;
-	font-weight: 800;
+	text-transform: capitalize;
+	font-weight: 700;
 }
 
 .ProjectInfo p {
-	font-size: 2.4rem;
+	font-size: 1.8rem;
 	font-family: var(--secondary-font);
-	color: var(--background);
-	width: 80%;
+	color: #fff;
+	width: 100%;
 
 	margin: 2rem 0;
 	line-height: 3rem;
 }
 
 .ProjectInfoButton {
-	background-color: var(--background);
-	display: inline-block;
-	padding: 1.5rem 3rem;
+	/* background-color: var(--color-primary); */
+	border: 1px solid var(--color-primary);
+	margin-top: 4rem;
+	padding: 1.5rem 2.4rem;
 	font-size: 2.4rem;
 	display: flex;
+	width: max-content;
 	align-items: center;
-	transform: translateX(100%);
+	transform: translateX(70%);
 	transition: all 0.4s ease-in-out;
 }
 
@@ -97,7 +126,7 @@
 }
 
 .ButtonContainer {
-	margin-top: 18rem;
+	margin-top: 3rem;
 	text-align: center;
 }
 
@@ -120,21 +149,31 @@
 
 @media only screen and (max-width: 75em) {
 	.Project {
-		margin-left: 3rem;
-		margin-right: 3rem;
-		margin-top: 3rem;
+		flex-direction: column;
+	}
+
+	.ProjectInfoText {
+		background-color: var(--background);
+		padding: 6rem 3rem;
 		width: 100%;
+		transform: translate(0%, 0%);
 	}
 
 	.ProjectImage {
 		width: 100%;
-		/* object-fit: cover; */
+		height: 100%;
+		object-fit: cover;
 	}
 
 	.ProjectInfo {
-		transform: translateY(-25%);
+		/* transform: translateY(-25%); */
 		height: min-content;
-		padding: 2.5rem 2rem;
+		padding: 0;
+	}
+
+	.ProjectInfoText {
+		border: 1px solid var(--color-primary);
+		border-top: 0;
 	}
 
 	.ProjectInfo h5 {
@@ -142,7 +181,7 @@
 	}
 
 	.ProjectInfoButton {
-		transform: translateX(80%);
+		transform: translateX(100%);
 	}
 }
 
@@ -157,15 +196,7 @@
 		margin-top: 3rem;
 		max-width: 100%;
 	}
-	.ProjectImage {
-		height: 20vh;
-		object-fit: cover;
-	}
-	.ProjectInfo {
-		position: relative;
-		width: 100%;
-		transform: translateY(0);
-	}
+
 	.ProjectInfo h5 {
 		font-size: 1.8rem;
 	}
@@ -178,8 +209,8 @@
 		padding: 1.2rem 1.5rem;
 		display: flex;
 		align-items: center;
-		transform: translateX(60%);
-		width: 45vw;
+		transform: translateX(0%);
+		width: 100%;
 		justify-content: center;
 	}
 

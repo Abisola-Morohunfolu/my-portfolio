@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 import * as classes from './Featured.module.css';
-import projectImage from '../../../assets/images/project.png';
 import Button from '../../UI/Button/button';
 import { ReactComponent as RightArrow } from '../../../assets/svg/RightArrow.svg';
+import { Projects } from '../../../static-data/projectData';
 
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -14,6 +14,10 @@ const FeaturedProject = ({ showProjects }) => {
 		triggerOnce: true,
 		rootMargin: '-100px',
 	});
+
+	const randomNumber = Math.floor(Math.random() * Projects.length);
+
+	console.log(randomNumber);
 
 	React.useEffect(() => {
 		if (imageInView) {
@@ -45,7 +49,11 @@ const FeaturedProject = ({ showProjects }) => {
 							},
 						}}
 					></motion.div>
-					<img className={classes.ProjectImage} src={projectImage} alt="My Quiz App" />
+					<img
+						className={classes.ProjectImage}
+						src={Projects[randomNumber].image}
+						alt={Projects[randomNumber].title}
+					/>
 				</div>
 				<motion.div
 					className={classes.ProjectInfo}
@@ -80,25 +88,25 @@ const FeaturedProject = ({ showProjects }) => {
 							},
 						}}
 					></motion.div>
-					<h5 className={classes.ProjectName}>Quiz App</h5>
-					<p>
-						A fun Quiz App to help improve your knowledge of the world and other fascinating topics
-					</p>
-					<Button>
-						<div className={classes.ProjectInfoButton}>
-							<h5>Read More</h5>
-							<RightArrow />
-						</div>
-					</Button>
+					<div className={classes.ProjectInfoText}>
+						<h5 className={classes.ProjectName}>{Projects[randomNumber].title}</h5>
+						<p>{Projects[randomNumber].description}</p>
+						<a href={Projects[randomNumber].demoLink} target="_blank" rel="noreferrer noopener">
+							<div className={classes.ProjectInfoButton}>
+								<h5>Live Demo</h5>
+								<RightArrow />
+							</div>
+						</a>
+					</div>
 				</motion.div>
-				<div className={classes.ButtonContainer}>
-					<Button clicked={showProjects}>
-						<div className={classes.AllProjectButton}>
-							<h5 className={classes.ButtonText}>All Projects</h5>
-							<RightArrow />
-						</div>
-					</Button>
-				</div>
+			</div>
+			<div className={classes.ButtonContainer}>
+				<Button clicked={showProjects}>
+					<div className={classes.AllProjectButton}>
+						<h5 className={classes.ButtonText}>All Projects</h5>
+						<RightArrow />
+					</div>
+				</Button>
 			</div>
 		</section>
 	);

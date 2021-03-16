@@ -13,8 +13,8 @@ const projectMenu = ({ menuState, closeMenu }) => {
 			y: 0,
 			scale: 1,
 			transition: {
-				delayChildren: 0.7,
-				staggerChildren: 0.25,
+				delayChildren: 0.5,
+				staggerChildren: 0.2,
 				ease: [0.83, 0, 0.17, 1],
 			},
 		},
@@ -72,14 +72,20 @@ const projectMenu = ({ menuState, closeMenu }) => {
 								animate="show"
 							>
 								{Projects.map((item) => (
-									<Link t0="/" key={item.id + item.title} variants={children}>
+									<a
+										href={`${item.demoLink}`}
+										target="_blank"
+										rel="noreferrer noopener"
+										key={item.id + item.title}
+										variants={children}
+									>
 										<ProjectItem
 											number={item.orderNo}
 											name={item.title}
 											key={item.id + item.title}
 											variants={children}
 										/>
-									</Link>
+									</a>
 								))}
 							</motion.div>
 						</motion.div>
