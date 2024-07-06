@@ -1,22 +1,14 @@
-import * as React from 'react';
-
-import Navbar from './Header/Navbar/navbar';
-import Header from './Header/header';
-import ProjectMenu from './ProjectsMenu/ProjectMenu';
-import FeaturedProject from './FeaturedProject/FeaturedProject';
-import About from './About/About';
+import Navbar from './navbar.tsx';
+import Header from './header.tsx';
+import FeaturedProject from './featured-project.tsx';
+import About from './about';
 
 const Home = () => {
-	const [toggleMenu, setToggleMenu] = React.useState(false);
-
-	const hideMenu = () => setToggleMenu(false);
-	const showMenu = () => setToggleMenu(true);
 	return (
 		<>
-			<Navbar showMenu={showMenu} />
+			<Navbar />
 			<Header />
-			<ProjectMenu menuState={toggleMenu} closeMenu={hideMenu} />
-			<FeaturedProject showProjects={showMenu} />
+			<FeaturedProject />
 			<About />
 		</>
 	);
