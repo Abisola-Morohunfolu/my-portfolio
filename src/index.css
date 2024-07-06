@@ -1,59 +1,57 @@
-:root {
-	--color-primary: #fbff47;
-	--primary-font: 'Syne', sans-serif;
-	--secondary-font: 'Philosopher', sans-serif;
-	--background: #1b1b1b;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
-	scroll-snap-type: y mandatory;
-}
+@layer base {
+  :root {
+    --color-primary: #fcfaf5;
+    --light-background: #f3ece4;
+    --color-dark: #333;
+    --color-accent: #5f3ccb;
+    --primary-font: "Syne", sans-serif;
+    --secondary-font: "Philosopher", sans-serif;
+    --background: #1c1e21;
+  }
 
-a {
-	text-decoration: none;
-	color: inherit;
-	font-family: inherit;
-}
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /*scroll-snap-type: y mandatory;*/
+  }
 
-*,
-*:before,
-*:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+  }
 
-body {
-	box-sizing: inherit;
-	font-family: var(--primary-font);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--background);
-	color: #fff;
-	scroll-snap-type: y mandatory;
-}
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  body {
+    box-sizing: inherit;
+    font-family: var(--primary-font);
+    background-color: var(--background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    /*scroll-snap-type: y mandatory;*/
+  }
 }
-
-/* @media (prefers-color-scheme: dark) {
-	body {
-		background-color: var(--background);
-		color: #fff;
-	}
-} */
 
 @media only screen and (max-width: 75em) {
-	html {
-		font-size: 56.25%;
-	}
+  html {
+    font-size: 56.25%;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
-	html {
-		font-size: 50%;
-	}
+  html {
+    font-size: 50%;
+  }
 }
