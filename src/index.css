@@ -1,3 +1,5 @@
+@import "./styles/fonts.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,8 +10,8 @@
     --light-background: #f3ece4;
     --color-dark: #333;
     --color-accent: #5f3ccb;
-    --primary-font: "Syne", sans-serif;
-    --secondary-font: "Philosopher", sans-serif;
+    --primary-font: "BDOGrotesk", sans-serif;
+    --secondary-font: "BDOGrotesk", sans-serif;
     --background: #1c1e21;
   }
 

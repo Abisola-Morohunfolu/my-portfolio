@@ -10,6 +10,9 @@ module.exports = {
         secondary: 'var(--color-dark)',
         accent: 'var(--color-accent)'
       },
+      fontFamily: {
+        brand: ["BDOGrotesk", "sans-serif"],
+      },
     },
   },
   plugins: [],
