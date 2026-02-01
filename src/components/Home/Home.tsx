@@ -3,8 +3,11 @@ import Header from './header';
 import Skills from './Skills';
 import FeaturedProject from './featured-project';
 import About from './about';
+import { useLenis } from '../../hooks/useLenis';
 
 const Home = () => {
+	useLenis();
+
 	return (
 		<>
 			<Navbar />
