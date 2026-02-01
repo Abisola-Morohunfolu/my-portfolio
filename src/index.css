@@ -1,4 +1,4 @@
-@import "./styles/fonts.css";
+@import './styles/fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -10,13 +10,24 @@
     --light-background: #f3ece4;
     --color-dark: #333;
     --color-accent: #5f3ccb;
-    --primary-font: "BDOGrotesk", sans-serif;
-    --secondary-font: "BDOGrotesk", sans-serif;
+    --primary-font: 'BDOGrotesk', sans-serif;
+    --secondary-font: 'BDOGrotesk', sans-serif;
     --background: #1c1e21;
+
+    /* New accent colors */
+    --color-lime: #c5ff41;
+    --color-orange: #f46c38;
+
+    /* Gradient definitions */
+    --gradient-primary: linear-gradient(135deg, #5f3ccb 0%, #c5ff41 100%);
+    --gradient-cta: linear-gradient(135deg, #f46c38 0%, #c5ff41 100%);
+
+    /* Dark theme colors */
+    --color-dark-surface: #252729;
+    --color-dark-border: #3a3d42;
   }
 
   html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
     /*scroll-snap-type: y mandatory;*/
   }
@@ -46,7 +57,7 @@
   }
 }
 
-@media only screen and (max-width: 75em) {
+/* @media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
@@ -56,4 +67,4 @@
   html {
     font-size: 50%;
   }
-}
+} */

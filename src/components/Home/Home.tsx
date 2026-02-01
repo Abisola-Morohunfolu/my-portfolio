@@ -1,6 +1,7 @@
-import Navbar from './navbar.tsx';
-import Header from './header.tsx';
-import FeaturedProject from './featured-project.tsx';
+import Navbar from './navbar';
+import Header from './header';
+import Skills from './Skills';
+import FeaturedProject from './featured-project';
 import About from './about';
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
 		<>
 			<Navbar />
 			<Header />
+			<Skills />
 			<FeaturedProject />
 			<About />
 		</>
