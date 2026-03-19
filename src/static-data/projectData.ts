@@ -21,8 +21,8 @@ export const Projects: Project[] = [
 		description: 'The landing page of equally.ai - an enterprise accessibility solution',
 		fullDescription: 'Designed and developed the marketing website for equally.ai, showcasing their AI-driven accessibility remediation platform. Focused on performance and seamless user experience.',
 		demoLink: 'https://equally.ai',
-		image: 'https://res.cloudinary.com/abisola/image/upload/v1720393166/Screenshot_2024-07-07_at_23.53.52_gmiikm.png',
-		technologies: ['Next.js', 'Material-UI', 'Framer Motion'],
+		image: '/equally.png',
+		technologies: ['Next.js', 'Material-UI', 'React-Context'],
 		role: 'Full Stack Developer',
 		highlights: [
 			'Optimized for performance (95+ Lighthouse)',
@@ -31,25 +31,8 @@ export const Projects: Project[] = [
 		]
 	},
 	{
-		id: 1,
-		orderNo: '02',
-		title: 'flowy',
-		subtitle: 'Accessibility Made Simple',
-		description: 'A Chrome extension for running and managing website accessibility audits',
-		fullDescription: 'Flowy empowers developers and content creators to identify and fix accessibility issues in real-time. Built with a focus on usability, it integrates seamlessly into existing workflows and provides actionable insights.',
-		demoLink: 'https://chromewebstore.google.com/detail/flowy/fjkmnbfpagmpblgkdflondomjkaejipi?pli=1',
-		image: 'https://res.cloudinary.com/abisola/image/upload/v1720393167/Screenshot_2024-07-07_at_23.54.14_rma7z7.png',
-		technologies: ['React', 'Material-UI', 'Redux', 'Chrome APIs'],
-		role: 'Frontend Developer',
-		highlights: [
-			'Real-time accessibility scanning',
-			'WCAG 2.1 compliance checking',
-			'Actionable remediation suggestions'
-		]
-	},
-	{
 		id: 2,
-		orderNo: '03',
+		orderNo: '02',
 		title: 'testassessify.com',
 		subtitle: 'EdTech Assessment Platform',
 		description: 'A comprehensive assessment platform for educational institutions',
@@ -65,8 +48,42 @@ export const Projects: Project[] = [
 		]
 	},
 	{
-		id: 4,
+		id: 5,
+		orderNo: '03',
+		title: 'System Playground',
+		subtitle: 'Visual Runtime Playground',
+		description: 'An interactive playground for visualizing event loops, render cycles, and concurrency models.',
+		fullDescription: 'Built a simulation-first playground that makes runtime behavior visible. The live Node.js board animates request ingress, event loop phases, queues, call stack, and libuv workers in real time, with the app structured to expand into React render-cycle and concurrency explorations.',
+		demoLink: 'https://system-playground-web-vk1v-a064nzams.vercel.app/',
+		image: '/system-playground-preview.png',
+		technologies: ['React', 'TypeScript', 'Vite', 'Vitest', 'Lerna'],
+		role: 'Frontend Engineer',
+		highlights: [
+			'Interactive Node.js event loop simulation with live queue and thread-pool views',
+			'Simulation-first monorepo split into engine, simulations, UI, and shared packages',
+			'Extensible shell for React render-cycle and concurrency playgrounds'
+		]
+	},
+	{
+		id: 1,
 		orderNo: '04',
+		title: 'flowy',
+		subtitle: 'Accessibility Made Simple',
+		description: 'A Chrome extension for running and managing website accessibility audits',
+		fullDescription: 'Flowy empowers developers and content creators to identify and fix accessibility issues in real-time. Built with a focus on usability, it integrates seamlessly into existing workflows and provides actionable insights.',
+		demoLink: 'https://chromewebstore.google.com/detail/flowy/fjkmnbfpagmpblgkdflondomjkaejipi?pli=1',
+		image: 'https://res.cloudinary.com/abisola/image/upload/v1720393167/Screenshot_2024-07-07_at_23.54.14_rma7z7.png',
+		technologies: ['React', 'Material-UI', 'Redux', 'Chrome APIs'],
+		role: 'Frontend Developer',
+		highlights: [
+			'Real-time accessibility scanning',
+			'WCAG 2.1 compliance checking',
+			'Actionable remediation suggestions'
+		]
+	},
+	{
+		id: 4,
+		orderNo: '05',
 		title: 'shortty.app',
 		subtitle: 'URL Shortener',
 		description: 'A clean, fast URL shortening service',
@@ -81,4 +98,5 @@ export const Projects: Project[] = [
 			'Copy to clipboard functionality'
 		]
 	},
+
 ];
