@@ -1,0 +1,863 @@
+{
+  "source": "fixture",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "profile": {
+    "_id": "profile",
+    "name": "Abisola Morohunfolu",
+    "role": "Product engineer",
+    "biography": "I build across the interface and the systems behind it. My work spans accessibility products, practical tools, and projects that help me understand how things work.",
+    "email": "bisola.morohunfolu@gmail.com",
+    "github": "https://github.com/Abisola-Morohunfolu",
+    "linkedin": "https://www.linkedin.com/in/bisola-morohunfolu-833354195/",
+    "notes": [
+      {
+        "_key": "assessments",
+        "title": "From setup to results.",
+        "text": "Assessment setup and performance review belong to the same workflow. At TestAssessify, I helped lead frontend work across both.",
+        "projectSlug": "testassessify"
+      },
+      {
+        "_key": "code",
+        "title": "Following the code.",
+        "text": "In CodeCanvas, I’m exploring how much context a static graph can give a reviewer, and where it needs to admit uncertainty.",
+        "projectSlug": "codecanvas"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "_id": "project-equally-ai",
+      "slug": "equally-ai",
+      "title": "Equally.ai",
+      "category": "Accessibility platform",
+      "summary": "Bringing AI into accessibility workflows so teams can turn website issues into practical recommendations.",
+      "contribution": "AWS Bedrock integration, AI-assisted accessibility recommendations, and the customer experience around them.",
+      "technologies": [
+        "AWS Bedrock",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Payment integrations"
+      ],
+      "status": "Live product",
+      "order": 0,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "recommendations",
+          "title": "Bringing AI into the workflow",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "recommendations-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Finding an accessibility issue is only the starting point. Teams also need to understand what to change. I integrated AWS Bedrock into the recommendation workflow to help bridge that gap.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "recommendations-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "I implemented support for text recommendations, image descriptions, and alt-text checks. The integration used the context of an issue to return suggestions the product could present for review.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "recommendations-2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s2",
+                  "text": "Working with the engineering team, I connected these capabilities to the existing workflow. AI suggestions became part of the process of reviewing and addressing accessibility issues.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "whole-product",
+          "title": "Connecting findings to action",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "whole-product-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I also worked on customer interfaces, Flowy’s browser experience, and public audits. These tools helped teams find issues and use the platform’s recommendations while working on their websites.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "whole-product-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Supporting work included copying website configurations, filtering and exporting integration records, and making billing and invoices accessible through the product. Each piece connected a customer task to the service behind it.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "reconciliation",
+          "title": "Keeping customer access consistent",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "reconciliation-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "A customer’s renewal should be reflected in their website access. I helped build a process that compared payment-provider records with the product’s subscription records and corrected supported differences.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "reconciliation-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "This work addressed cases where the product held an older expiration date after a renewal, helping keep payment information and customer access aligned.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "reflection",
+          "title": "What I took from it",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "reflection-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Integrating AI meant thinking beyond the model response: what context it needed, how a suggestion appeared in the product, and how someone would use it to move forward.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "reflection-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Working across the interface and supporting services helped me approach features as complete customer workflows.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/equally.png",
+        "alt": "Equally.ai website introducing its web accessibility products",
+        "width": 1728,
+        "height": 961,
+        "caption": "Equally.ai’s public website."
+      },
+      "collaborators": "Built with the Equally.ai engineering team. I contributed the AWS Bedrock integration and recommendation tools, alongside shared work on the AI workflow, customer interfaces, and supporting services.",
+      "demoUrl": "https://equally.ai",
+      "introduction": [
+        "Equally.ai: bringing AI into accessibility work.",
+        "I integrated AWS Bedrock into Equally.ai’s accessibility workflows, helping turn audit findings into recommendations teams could act on.",
+        "The work brought together text recommendations, image descriptions, and alt-text checks within the product. Teams could review AI suggestions as part of addressing accessibility issues on their websites.",
+        "Alongside the AI integration, I worked across the customer interface and supporting services to connect finding an issue with taking the next step."
+      ],
+      "impactEvidence": [
+        "Accessibility findings feed into practical AI-assisted recommendations within the product.",
+        "Image descriptions and alt-text checks support teams reviewing the accessibility of website images.",
+        "A shared AI integration connects text and image recommendations to the existing accessibility workflow."
+      ]
+    },
+    {
+      "_id": "project-flowy",
+      "slug": "flowy",
+      "title": "Flowy",
+      "category": "Browser extension",
+      "summary": "Accessibility audits where you work: inspect a website and review issues from the browser.",
+      "contribution": "I worked on the customer-facing experience within the wider Equally.ai product.",
+      "technologies": [
+        "React",
+        "Material UI",
+        "Redux",
+        "Chrome APIs"
+      ],
+      "status": "Live product",
+      "order": 2,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "browser",
+          "title": "Bringing audits into the browser",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "browser-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Flowy brings website accessibility checks into the browsing workflow. I worked on its React interface as part of the Equally.ai team, connecting the customer experience to shared platform capabilities.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "browser-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The platform case study covers my broader work on recommendations, customer interfaces, and backend systems.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/flowy.png",
+        "alt": "Flowy website introducing its browser-based accessibility audit tool",
+        "width": 1278,
+        "height": 1510,
+        "caption": "Flowy public website, from the original portfolio."
+      },
+      "demoUrl": "https://chromewebstore.google.com/detail/flowy/fjkmnbfpagmpblgkdflondomjkaejipi",
+      "collaborators": "Built with the Equally.ai team. Flowy is part of the wider platform, with shared audit and recommendation systems.",
+      "relatedSlug": "equally-ai"
+    },
+    {
+      "_id": "project-room-planner",
+      "slug": "room-planner",
+      "title": "Room Planner",
+      "category": "2D / 3D planning",
+      "summary": "See how a room fits before moving furniture. Compare layouts, edit dimensions, and take a plan with you.",
+      "contribution": "I built the planning experience, shared document model, device persistence, exports, and hosted snapshot workflow.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Konva",
+        "Three.js",
+        "IndexedDB",
+        "Cloudflare Workers"
+      ],
+      "status": "Live product",
+      "order": 4,
+      "featured": false,
+      "gallery": [
+        {
+          "src": "/images/room-planner-2d.png",
+          "alt": "Room Planner floor plan with measured furniture and room controls",
+          "width": 1440,
+          "height": 900,
+          "caption": "The same room document in the 2D editor."
+        },
+        {
+          "src": "/images/room-planner-mobile.png",
+          "alt": "Read-only Room Planner shared snapshot on a mobile screen",
+          "width": 945,
+          "height": 2100,
+          "caption": "The shared viewer on a narrow screen."
+        }
+      ],
+      "sections": [
+        {
+          "_key": "document",
+          "title": "One room, two views",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "document-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The 2D editor and 3D view read the same room document. Dimensions, placement, openings, and finishes stay connected when switching views.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "document-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Separate renderers let each view do its job while the document owns the room. Fit notes report bounds, collisions, door swings, and nearby gaps; they do not certify a walking route.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "device",
+          "title": "A useful plan on one device",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "device-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Planning works with device storage and no account. Independent alternatives make it possible to compare arrangements without overwriting the original.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "device-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Exports include a dimensioned PDF, floor-plan image, furniture CSV, and a restorable plan file. Accounts and cloud synchronization are deferred.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "sharing",
+          "title": "Share a snapshot",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "sharing-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Hosted links contain an immutable snapshot. Recipients can inspect it or save an independent copy. Editing the original room does not change an existing link.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "sharing-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Links expire after 30 days. The creating device keeps the management secret needed to revoke a link. Device planning continues when the sharing API is unavailable.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/room-planner-3d.png",
+        "alt": "Room Planner showing a furnished living room in 3D beside finish controls",
+        "width": 1440,
+        "height": 900,
+        "caption": "A real room in the planner, with editable wall and furniture finishes."
+      },
+      "demoUrl": "https://room-planner.amorohunfolu.workers.dev",
+      "statusNote": "Device-first planning and snapshot sharing. Accounts and cloud synchronization are deferred."
+    },
+    {
+      "_id": "project-system-playground",
+      "slug": "system-playground",
+      "title": "System Playground",
+      "category": "Runtime simulations",
+      "summary": "Make runtime behavior visible. Follow requests through the event loop, queues, and worker pool.",
+      "contribution": "I built a simulation-first engine and an interactive Node.js board, with reusable simulation and UI packages.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "Lerna"
+      ],
+      "status": "Prototype",
+      "order": 3,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "simulation",
+          "title": "A model you can inspect",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "simulation-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The Node.js board shows request ingress, event loop phases, queues, the call stack, and libuv workers. It is a simulation designed to explain behavior, not a live profiler.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "simulation-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The engine is separated from simulations and the UI so new explorations can reuse the runtime. React render-cycle and concurrency explorations remain future extensions.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/system-playground-preview.png",
+        "alt": "System Playground showing event loop phases, queues and worker activity",
+        "width": 1728,
+        "height": 961,
+        "caption": "The Node.js simulation board. This is a model of runtime behavior."
+      },
+      "statusNote": "The Node.js board is implemented. Additional runtime explorations are in progress."
+    },
+    {
+      "_id": "project-testassessify",
+      "slug": "testassessify",
+      "title": "TestAssessify",
+      "category": "Recruitment assessments",
+      "summary": "Helping hiring teams set up assessments and track candidate performance in one place.",
+      "contribution": "Helped lead frontend development for assessment setup and the admin dashboard at my previous employer.",
+      "technologies": [
+        "React",
+        "REST APIs"
+      ],
+      "status": "Live product",
+      "order": 1,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "assessment",
+          "title": "Setting up the assessment",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "assessment-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "TestAssessify helps hiring teams assess candidates against the requirements of a role. The platform supports choosing assessments from a library or creating custom assessments.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "assessment-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "I helped lead the frontend work for assessment setup: the experience hiring teams use to prepare the tests candidates will take.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "dashboard",
+          "title": "Making candidate performance visible",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "dashboard-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Once candidates take an assessment, the results need to support a hiring decision. I helped lead frontend development for the admin dashboard used to track candidate performance.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "dashboard-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The dashboard brought performance information into the team’s review workflow, helping administrators understand how candidates performed and use those results when deciding whom to progress.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/testassessify.png",
+        "alt": "Current TestAssessify homepage introducing its recruitment assessment platform, with hiring information beside two professionals",
+        "width": 1265,
+        "height": 712,
+        "caption": "TestAssessify’s current public website."
+      },
+      "collaborators": "Built with the team at my previous employer.",
+      "demoUrl": "https://testassessify.com/",
+      "introduction": [
+        "TestAssessify: from assessments to hiring insight.",
+        "Hiring teams need more than a test. They need a way to set up assessments and understand what the results say about each candidate.",
+        "At my previous employer, I helped lead frontend development for TestAssessify’s assessment setup and admin dashboard. My work connected preparing an assessment with tracking candidate performance, supporting the team’s decisions throughout the hiring process."
+      ],
+      "impactEvidence": [
+        "Hiring teams can prepare assessments within the product.",
+        "Administrators can track candidate performance through the dashboard.",
+        "Assessment results inform which candidates move forward in the hiring process."
+      ]
+    },
+    {
+      "_id": "project-codecanvas",
+      "slug": "codecanvas",
+      "title": "CodeCanvas",
+      "category": "Codebase exploration",
+      "summary": "Explore a TypeScript codebase, follow static call relationships, and review how a branch changes the system.",
+      "contribution": "I built the local analyzer, architecture canvas, guided trace views, and review workflow.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "ts-morph",
+        "Node.js"
+      ],
+      "status": "Local tool",
+      "order": 5,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "analysis",
+          "title": "Read the structure, then follow a path",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "analysis-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "CodeCanvas loads a TypeScript project with ts-morph and resolves modules, symbols, routes, and calls into a browsable graph. Architecture, guided traces, branch review, and planning are separate ways to inspect that graph.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "analysis-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Trace views follow static code relationships. Edges can be exact, inferred, or ambiguous; untyped calls and runtime-dependent providers limit what the analyzer can resolve.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "review",
+          "title": "Review with surrounding context",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "review-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Branch review groups changed symbols with affected entry points and data writes. Focus and context views help narrow a large graph without pretending the analysis is complete.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "review-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The tool runs locally against a selected checkout. It is a code exploration aid rather than a substitute for tests or runtime observation.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "statusNote": "A local development tool. Traces represent static analysis, not recorded runtime execution."
+    },
+    {
+      "_id": "project-monieplans",
+      "slug": "monieplans",
+      "title": "Monieplans",
+      "category": "Budget planning",
+      "summary": "Give money a purpose, log transactions, and compare the plan with what actually happened.",
+      "contribution": "I worked across the React budgeting interface and the API, authentication, and data model.",
+      "technologies": [
+        "React",
+        "Vite",
+        "Hono",
+        "Cloudflare Workers",
+        "D1",
+        "Drizzle"
+      ],
+      "status": "Work in progress",
+      "order": 6,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "budget",
+          "title": "Connect the plan to transactions",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "budget-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Monieplans organizes a budget around assigning money to categories, then logging transactions against the plan.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "budget-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The repository includes a React/Vite frontend and a Hono API on Workers with D1 and Drizzle. Authentication, budgets, categories, and transactions are part of the implementation. Public release is not verified.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "statusNote": "Budget planning implementation in progress. Public release status is not verified."
+    },
+    {
+      "_id": "project-moodboard",
+      "slug": "moodboard",
+      "title": "Moodboard",
+      "category": "Visual boards",
+      "summary": "Collect images, notes, and links on a board you can arrange and share.",
+      "contribution": "I worked on the board experience, media processing, sharing, and backend services.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Object storage"
+      ],
+      "status": "Work in progress",
+      "order": 7,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "boards",
+          "title": "A board with a backend",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "boards-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The board supports notes, uploaded images, and links. Media workers handle thumbnails, palettes, and link previews, while sharing and account services sit behind the interface.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "boards-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Private beta deployment and browser checks are documented in the repository. Real hosted storage, deployed cookies, backups, alerts, and final operator acceptance remain release checks.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "statusNote": "Private beta infrastructure is implemented. Hosted release and final operational acceptance are not verified."
+    },
+    {
+      "_id": "project-shortty",
+      "slug": "shortty",
+      "title": "Shortty",
+      "category": "Link utility",
+      "summary": "A small URL-shortening interface with a simple copy-and-share flow.",
+      "contribution": "I built the interface and connected it to a shortening API.",
+      "technologies": [
+        "React",
+        "CSS",
+        "REST APIs"
+      ],
+      "status": "Earlier work",
+      "order": 8,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "links",
+          "title": "Keep the interaction small",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "links-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "This earlier React project connects a URL-shortening API to a focused input, result, and copy interaction.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "links-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The original screenshot is retained. The current availability of the shortening service is not verified.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/shortty.png",
+        "alt": "Shortty URL-shortening interface",
+        "width": 1344,
+        "height": 657,
+        "caption": "Retained screenshot from the original portfolio."
+      },
+      "statusNote": "An earlier frontend project. Current shortening service availability is not verified."
+    }
+  ]
+}
