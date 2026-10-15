@@ -74,9 +74,6 @@ function Viewer({ projects }: { projects: Project[] }) {
               onClick={() => setSelected(project.slug)}
               onKeyDown={(event) => onKeyDown(event, index)}
             >
-              <span className="project-number" aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </span>
               <span>
                 <span className="project-name">{project.title}</span>
                 <span className="project-category">{project.category}</span>
@@ -98,7 +95,11 @@ function Viewer({ projects }: { projects: Project[] }) {
         aria-labelledby={`tab-${active.slug}`}
         tabIndex={0}
       >
-        <div className="viewer-media" key={active.slug} data-project={active.slug}>
+        <div
+          className="viewer-media"
+          key={active.slug}
+          data-project={active.slug}
+        >
           {active.cover ? (
             <ProjectImage
               key={active.cover.src}
@@ -133,10 +134,25 @@ function Home({ snapshot }: { snapshot: ContentSnapshot }) {
   return (
     <>
       <section className="intro shell">
-        <p className="eyebrow">{profile.role}</p>
-        <h1>
-          I'm Abisola. I build products <span>end to end.</span>
-        </h1>
+        <div className="intro-copy">
+          <p className="eyebrow">{profile.role}</p>
+          <h1>
+            I'm Abisola. I build products <span>end to end.</span>
+          </h1>
+        </div>
+        <div className="intro-art" aria-hidden="true">
+          <picture>
+            <source type="image/webp" srcSet="/images/connected-parts.webp" />
+            <img
+              src="/images/connected-parts.jpg"
+              alt=""
+              width="640"
+              height="640"
+              decoding="async"
+              loading="lazy"
+            />
+          </picture>
+        </div>
       </section>
       <section
         id="works"
@@ -154,7 +170,6 @@ function Home({ snapshot }: { snapshot: ContentSnapshot }) {
         aria-labelledby="approach-title"
       >
         <div className="approach-heading">
-          <p className="section-label">How I work</p>
           <h2 id="approach-title">My approach.</h2>
           <p>{profile.biography}</p>
         </div>
@@ -313,7 +328,6 @@ function Contact({ snapshot }: { snapshot: ContentSnapshot }) {
   const { profile } = snapshot;
   return (
     <footer id="contact" className="contact shell">
-      <p className="section-label">Get in touch</p>
       <h2>
         Let's talk<span>.</span>
       </h2>
@@ -326,6 +340,7 @@ function Contact({ snapshot }: { snapshot: ContentSnapshot }) {
           <span>© {new Date(snapshot.generatedAt).getUTCFullYear()}</span>
         </p>
         <div>
+          <ThemeToggle />
           <a href={profile.github} target="_blank" rel="noreferrer">
             GitHub <span aria-hidden="true">↗</span>
           </a>
@@ -336,6 +351,44 @@ function Contact({ snapshot }: { snapshot: ContentSnapshot }) {
         </div>
       </div>
     </footer>
+  );
+}
+
+type Theme = 'system' | 'light' | 'dark';
+function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>('system');
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'light' || saved === 'dark') setTheme(saved);
+    } catch {
+      /* System preference remains available when storage is blocked. */
+    }
+  }, []);
+  useEffect(() => {
+    if (theme === 'system')
+      document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.dataset.theme = theme;
+  }, [theme]);
+  function cycleTheme() {
+    const next =
+      theme === 'system' ? 'light' : theme === 'light' ? 'dark' : 'system';
+    setTheme(next);
+    try {
+      localStorage.setItem('portfolio-theme', next);
+    } catch {
+      /* Theme selection still works for the current page. */
+    }
+  }
+  return (
+    <button
+      className="theme-toggle"
+      type="button"
+      onClick={cycleTheme}
+      aria-label={`Color theme: ${theme}. Switch to ${theme === 'system' ? 'light' : theme === 'light' ? 'dark' : 'system'}.`}
+    >
+      Theme: {theme[0].toUpperCase() + theme.slice(1)}
+    </button>
   );
 }
 

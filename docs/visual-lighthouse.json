@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-15",
+  "environment": "Local production preview; Lighthouse mobile simulation; uncompressed text responses",
+  "lighthouseVersion": "11.7.1",
+  "scores": {
+    "performance": 89,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "displayValue": "2.6 s",
+      "numericValue": 2553.8234
+    },
+    "largest-contentful-paint": {
+      "displayValue": "3.2 s",
+      "numericValue": 3154.9157999999998
+    },
+    "cumulative-layout-shift": {
+      "displayValue": "0.05",
+      "numericValue": 0.0495002736835222
+    },
+    "total-blocking-time": {
+      "displayValue": "0 ms",
+      "numericValue": 0
+    }
+  }
+}
