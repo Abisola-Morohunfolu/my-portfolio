@@ -22,3 +22,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .idea
+
+# Portfolio renderer and separate authenticated Studio
+/studio/node_modules
+/studio/dist
+/studio/.sanity
+.env
+.env.*
+!.env.example
+!studio/.env.example
+*.tsbuildinfo

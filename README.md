@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Abisola's working studio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React 18 + Vite 5 + TypeScript portfolio for [abisola.xyz](https://abisola.xyz), hosted on Netlify. Sanity is the intended published-content backend; its authenticated Studio is a separate application in `studio/`.
 
-## Available Scripts
+## Local review
 
-In the project directory, you can run:
+```sh
+yarn install --frozen-lockfile
+npm run dev
+# Or review the rendered production output:
+npm run build
+npm run preview
+```
 
-### `yarn start`
+The current checkout uses **local fixture content**, not a connected Sanity dataset. `public/content-snapshot.json` contains nine project entries, prepared from existing portfolio material and verified local repositories. Production builds on Netlify are configured to require Sanity and fail if it is unavailable or unconfigured.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run `npm run check` for strict type checking, lint, content/rendering tests, a production build, and generated-artifact verification. Build output goes to `build/client`; the pre-existing untracked `dist/` and `server.js` are preserved.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Pageviews and key link clicks use the existing Umami Cloud project. See [analytics](docs/analytics.md) for events, production-domain restrictions, and dashboard verification.
 
-### `yarn test`
+The site supports `/`, `/projects`, and `/projects/:slug`. A Vite server entry renders every published route from one build-time snapshot. The client hydrates that exact snapshot, then refreshes published content; a failed refresh keeps the rendered content. Each route includes useful HTML, its own metadata, and a canonical URL. Unknown routes return an actual 404 rather than a successful SPA shell.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Content and deployment
 
-### `yarn build`
+Follow [the setup runbook](docs/setup.md) to connect Sanity, migrate content as drafts, host Studio separately, wire Netlify rebuilds, and review a deploy preview. No draft or write credentials belong in the public bundle.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Verification notes](docs/verification.md) record what was checked locally and what needs a connected account. [Internal source notes](docs/source-evidence.md) record release evidence separately from CMS documents.

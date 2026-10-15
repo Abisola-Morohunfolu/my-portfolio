@@ -1,0 +1,5 @@
+.portfolio-preview { background:#F7F8FA;color:#17191D;font-family:'BDOGrotesk',sans-serif;padding:28px;min-height:100%; }
+.preview-notice { font-size:12px;color:#60646e;margin-bottom:24px; }
+.portfolio-preview .case-header h1 { font-size:52px; }
+.portfolio-preview .case-opening,.portfolio-preview .case-body { grid-template-columns:1fr;gap:28px; }
+.portfolio-preview .case-index { position:static; }

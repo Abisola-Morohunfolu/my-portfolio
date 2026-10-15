@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#F7F8FA"/>
+<g font-family="Arial,sans-serif" fill="#17191D">
+<text x="70" y="100" font-size="38" font-weight="700" letter-spacing="-2">abisola<tspan fill="#3155D9">.</tspan></text>
+<text x="70" y="235" font-size="23" fill="#60646e">Product engineer</text>
+<text x="65" y="345" font-size="80" letter-spacing="-4">I'm Abisola. I build</text>
+<text x="65" y="440" font-size="80" letter-spacing="-4">products <tspan fill="#3155D9">end to end.</tspan></text>
+<text x="70" y="558" font-size="23" fill="#60646e">abisola.xyz</text>
+</g></svg>

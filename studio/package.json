@@ -1,0 +1,28 @@
+{
+  "name": "abisola-portfolio-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "typecheck": "tsc --noEmit",
+    "predev": "node ../scripts/studio-css.mjs",
+    "prebuild": "node ../scripts/studio-css.mjs"
+  },
+  "dependencies": {
+    "sanity": "6.19.0",
+    "@sanity/cli": "8.16.0",
+    "react": "19.2.2",
+    "react-dom": "19.2.2",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

@@ -1,0 +1,981 @@
+{
+  "source": "fixture",
+  "generatedAt": "2026-10-14T00:00:00.000Z",
+  "profile": {
+    "_id": "profile",
+    "name": "Abisola Morohunfolu",
+    "role": "Product engineer",
+    "biography": "I build across the interface and the systems behind it. My work spans accessibility products, practical tools, and projects that help me understand how things work.",
+    "email": "bisola.morohunfolu@gmail.com",
+    "github": "https://github.com/Abisola-Morohunfolu",
+    "linkedin": "https://www.linkedin.com/in/bisola-morohunfolu-833354195/",
+    "notes": [
+      {
+        "_key": "assessments",
+        "title": "From setup to results.",
+        "text": "Assessment setup and performance review belong to the same workflow. At TestAssessify, I helped lead frontend work across both.",
+        "projectSlug": "testassessify"
+      },
+      {
+        "_key": "code",
+        "title": "Following the code.",
+        "text": "In CodeCanvas, I’m exploring how much context a static graph can give a reviewer, and where it needs to admit uncertainty.",
+        "projectSlug": "codecanvas"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "_id": "project-equally-ai",
+      "slug": "equally-ai",
+      "title": "Equally.ai",
+      "category": "Accessibility platform",
+      "summary": "Bringing AI into accessibility workflows so teams can turn website issues into practical recommendations.",
+      "contribution": "Helping teams understand accessibility issues, improve their websites, and keep access to the tools they need.",
+      "technologies": [
+        "AWS Bedrock",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "Payment integrations"
+      ],
+      "status": "Live product",
+      "order": 0,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "recommendations",
+          "title": "From an issue to a next step",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "recommendations-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "An accessibility report can tell a team what is wrong without making the next step clear. I worked on recommendations that give people a starting point for making a change.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "recommendations-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "This included suggestions for text, descriptions of images, and checks on alt text. Teams could review the suggestions while working through the issues on their websites.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "whole-product",
+          "title": "Make the everyday work easier",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "whole-product-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I worked across the customer tools people use to review audits, manage websites, and act on findings. That also included Flowy, which brings accessibility checks into the browser.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "whole-product-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Smaller tasks mattered too: reusing website settings, finding and exporting records, and reaching billing information and invoices.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "reconciliation",
+          "title": "Keep access in step with a renewal",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "reconciliation-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "When a customer renews, their website access should reflect it. I helped address cases where the product still showed an older expiration date after a renewal.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "reconciliation-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The goal was to keep the customer’s subscription and access aligned so they could continue using the product.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "reflection",
+          "title": "What I took from it",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "reflection-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The useful part of an AI suggestion is what someone can do with it. I learned to think about where a recommendation appears, what it needs to explain, and how it helps a person move forward.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "reflection-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Working across these parts of the product helped me see the customer’s task as a whole.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/equally.png",
+        "alt": "Equally.ai website introducing its web accessibility products",
+        "width": 1728,
+        "height": 961,
+        "caption": "Equally.ai’s public website."
+      },
+      "collaborators": "Built with the Equally.ai engineering team. I contributed the AWS Bedrock integration and recommendation tools, alongside shared work on the AI workflow, customer interfaces, and supporting services.",
+      "demoUrl": "https://equally.ai",
+      "introduction": [
+        "Equally.ai: bringing AI into accessibility work.",
+        "I helped bring AI recommendations into the way teams find and fix accessibility issues on their websites.",
+        "Someone reviewing an issue could get suggestions for what to change, including image descriptions and alt text, and decide how to use them.",
+        "I also worked on the wider customer experience, from reviewing website issues to managing subscriptions and access."
+      ],
+      "impactEvidence": [
+        "Teams can review suggested changes alongside accessibility findings.",
+        "Image descriptions and alt-text checks help people review website images.",
+        "Customers can manage website access, subscriptions, and billing through the product."
+      ]
+    },
+    {
+      "_id": "project-flowy",
+      "slug": "flowy",
+      "title": "Flowy",
+      "category": "Browser extension",
+      "summary": "Accessibility audits where you work: inspect a website and review issues from the browser.",
+      "contribution": "Check a website for accessibility issues and review what needs attention without leaving the browser.",
+      "technologies": [
+        "React",
+        "Material UI",
+        "Redux",
+        "Chrome APIs"
+      ],
+      "status": "Live product",
+      "order": 3,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "browser",
+          "title": "Check the page you are working on",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "browser-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Flowy lets people review accessibility issues while browsing a website. I worked on the experience for finding issues and understanding what needs attention as part of the Equally.ai team.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "browser-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "It brings the audit closer to the page itself, so a developer or content editor can move between a finding and the work of addressing it.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/flowy.png",
+        "alt": "Flowy website introducing its browser-based accessibility audit tool",
+        "width": 1278,
+        "height": 1510,
+        "caption": "Flowy’s website."
+      },
+      "demoUrl": "https://chromewebstore.google.com/detail/flowy/fjkmnbfpagmpblgkdflondomjkaejipi",
+      "collaborators": "Built with the Equally.ai team. Flowy is part of the wider platform, with shared audit and recommendation systems.",
+      "relatedSlug": "equally-ai"
+    },
+    {
+      "_id": "project-room-planner",
+      "slug": "room-planner",
+      "title": "Room Planner",
+      "category": "2D / 3D planning",
+      "summary": "See how a room fits before moving furniture. Compare layouts, edit dimensions, and take a plan with you.",
+      "contribution": "Plan a room, try furniture arrangements, compare alternatives, and share the result before moving anything.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Konva",
+        "Three.js",
+        "IndexedDB",
+        "Cloudflare Workers"
+      ],
+      "status": "Live product",
+      "order": 2,
+      "featured": true,
+      "gallery": [
+        {
+          "src": "/images/room-planner-2d.png",
+          "alt": "Room Planner floor plan with measured furniture and room controls",
+          "width": 1440,
+          "height": 900,
+          "caption": "The same room as a measured floor plan."
+        },
+        {
+          "src": "/images/room-planner-mobile.png",
+          "alt": "Room Planner shared room view on a mobile screen",
+          "width": 945,
+          "height": 2100,
+          "caption": "The room shared on a phone."
+        }
+      ],
+      "sections": [
+        {
+          "_key": "document",
+          "title": "Try the room before moving anything",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "document-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Change room dimensions, position furniture, and try different finishes. The floor plan helps with measurements; the 3D view makes the arrangement easier to picture.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "document-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Fit notes flag furniture overlaps, gaps, and door swings so there is more to go on than how the layout looks.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "device",
+          "title": "Keep a few options open",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "device-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I wanted it to be easy to try a second idea without undoing the first. Save separate alternatives and compare arrangements without overwriting the version you started with.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "device-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Take the plan with you as a measured PDF, a floor-plan image, a furniture list, or a file you can open again.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "sharing",
+          "title": "Share the plan",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "sharing-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Send someone a view of the room that they can inspect or save as their own copy. The version you shared stays the same while you continue working on your original.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "sharing-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Shared links last for 30 days, and you can revoke a link when it is no longer needed.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/room-planner-3d.png",
+        "alt": "Room Planner showing a furnished living room in 3D beside finish controls",
+        "width": 1440,
+        "height": 900,
+        "caption": "A real room in the planner, with editable wall and furniture finishes."
+      },
+      "demoUrl": "https://room-planner.amorohunfolu.workers.dev",
+      "introduction": [
+        "Room Planner",
+        "I built Room Planner to make it easier to work out whether a room layout will fit before moving furniture.",
+        "Draw the room, add furniture, and switch between a floor plan and a 3D view. Try another arrangement without losing the first one, then save or share the plan."
+      ]
+    },
+    {
+      "_id": "project-system-playground",
+      "slug": "system-playground",
+      "title": "System Playground",
+      "category": "Runtime simulations",
+      "summary": "Make runtime behavior visible. Follow requests through the event loop, queues, and worker pool.",
+      "contribution": "See how requests move through a program, what waits in a queue, and what happens next.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Vitest",
+        "Lerna"
+      ],
+      "status": "Prototype",
+      "order": 4,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "simulation",
+          "title": "Follow what happens next",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "simulation-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Reading about the event loop is one thing; seeing a request wait, run, and hand work off makes the sequence easier to understand.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "simulation-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I started with Node.js as a way to explore these ideas visually. The playground is a place to experiment with runtime behavior and build a clearer picture of what is happening.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/system-playground-preview.png",
+        "alt": "System Playground showing event loop phases, queues and worker activity",
+        "width": 1728,
+        "height": 961,
+        "caption": "Following requests through the Node.js event loop."
+      },
+      "introduction": [
+        "System Playground",
+        "I built System Playground to make the parts of a program that are usually invisible easier to follow.",
+        "The Node.js playground lets you watch requests move between the call stack, queues, and workers. It is a model for exploring how things work, with the sequence laid out in front of you."
+      ]
+    },
+    {
+      "_id": "project-testassessify",
+      "slug": "testassessify",
+      "title": "TestAssessify",
+      "category": "Recruitment assessments",
+      "summary": "Helping hiring teams set up assessments and track candidate performance in one place.",
+      "contribution": "Prepare candidate assessments and bring the results together so hiring teams can decide whom to progress.",
+      "technologies": [
+        "React",
+        "REST APIs"
+      ],
+      "status": "Live product",
+      "order": 1,
+      "featured": true,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "assessment",
+          "title": "Setting up the assessment",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "assessment-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "TestAssessify helps hiring teams assess candidates against the requirements of a role. The platform supports choosing assessments from a library or creating custom assessments.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "assessment-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "I helped lead the frontend work for assessment setup: the experience hiring teams use to prepare the tests candidates will take.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "dashboard",
+          "title": "Making candidate performance visible",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "dashboard-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Once candidates take an assessment, the results need to support a hiring decision. I helped lead frontend development for the admin dashboard used to track candidate performance.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "dashboard-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "The dashboard brought performance information into the team’s review workflow, helping administrators understand how candidates performed and use those results when deciding whom to progress.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/testassessify.png",
+        "alt": "Current TestAssessify homepage introducing its recruitment assessment platform, with hiring information beside two professionals",
+        "width": 1265,
+        "height": 712,
+        "caption": "TestAssessify’s homepage."
+      },
+      "collaborators": "Built with the team at my previous employer.",
+      "demoUrl": "https://testassessify.com/",
+      "introduction": [
+        "TestAssessify: from assessments to hiring insight.",
+        "Hiring teams need more than a test. They need a way to set up assessments and understand what the results say about each candidate.",
+        "At my previous employer, I helped lead frontend development for TestAssessify’s assessment setup and admin dashboard. My work connected preparing an assessment with tracking candidate performance, supporting the team’s decisions throughout the hiring process."
+      ],
+      "impactEvidence": [
+        "Hiring teams can prepare assessments within the product.",
+        "Administrators can track candidate performance through the dashboard.",
+        "Assessment results inform which candidates move forward in the hiring process."
+      ]
+    },
+    {
+      "_id": "project-codecanvas",
+      "slug": "codecanvas",
+      "title": "CodeCanvas",
+      "category": "Codebase exploration",
+      "summary": "Find your way through a codebase and understand a change before reviewing it.",
+      "contribution": "Explore how parts of a codebase connect, follow a path through the code, and review a change with its surrounding context.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "ts-morph",
+        "Node.js"
+      ],
+      "status": "Personal project",
+      "order": 5,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "analysis",
+          "title": "Find a way into the code",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "analysis-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Start with the map to see how the parts connect, then narrow in on a route or a function. Guided paths help explain how one part leads to another.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "analysis-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The map comes from reading the source code. Where a connection is uncertain, CodeCanvas makes that uncertainty visible.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "review",
+          "title": "See a change in context",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "review-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "A diff shows the lines that changed. I wanted a view of the surrounding code too: where a changed function is used, which entry points lead to it, and what else may need a closer look.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "review-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "CodeCanvas keeps that exploration alongside the review, so it is easier to ask useful questions about a change.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "introduction": [
+        "CodeCanvas",
+        "I built CodeCanvas to help me find my way through a codebase without holding the whole thing in my head.",
+        "It turns relationships in TypeScript code into a map I can explore, then helps me follow a path or see where a change might reach."
+      ]
+    },
+    {
+      "_id": "project-monieplans",
+      "slug": "monieplans",
+      "title": "Monieplans",
+      "category": "Budget planning",
+      "summary": "Give money a purpose, log transactions, and compare the plan with what actually happened.",
+      "contribution": "Give your money a monthly plan, keep everyday spending manageable, and adjust when your priorities change.",
+      "technologies": [
+        "React",
+        "Vite",
+        "Hono",
+        "Cloudflare Workers",
+        "D1",
+        "Drizzle"
+      ],
+      "status": "Work in progress",
+      "order": 6,
+      "featured": false,
+      "gallery": [
+        {
+          "src": "/images/monieplans-budget.png",
+          "alt": "Monieplans budget category showing available funds, original target, current allocation, and recent expenses",
+          "width": 1440,
+          "height": 1136,
+          "caption": "A budget category with available funds, allocations, and recent expenses."
+        },
+        {
+          "src": "/images/monieplans-review-mobile.png",
+          "alt": "Monieplans mobile monthly review with sample spending totals, category breakdowns, and weekly allocations",
+          "width": 390,
+          "height": 1821,
+          "caption": "Monthly spending, category totals, and weekly allocations on mobile."
+        }
+      ],
+      "sections": [
+        {
+          "_key": "budget",
+          "title": "Make the month easier to manage",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "budget-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I wanted a plan that distinguishes fixed needs from everyday spending. Rent or fuel can stay monthly, while groceries and other flexible categories can be paced week by week.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "budget-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Log expenses as they happen and see what is still available. The aim is to make the next spending decision easier to understand.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "adjust",
+          "title": "Leave room for a change of plan",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "adjust-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "A budget should be useful when things change too. Move unused money to the category that needs it, while keeping the original target visible.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "adjust-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The monthly review brings spending and adjustments together, so you can see what happened and use it when planning the next month.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/monieplans-homepage.jpg",
+        "alt": "Monieplans homepage introducing flexible monthly budgets and showing how money moves between categories",
+        "width": 1425,
+        "height": 900,
+        "caption": "Monieplans’ homepage."
+      },
+      "introduction": [
+        "Monieplans",
+        "Monieplans is my take on a budget that can bend with real life.",
+        "Set a monthly spending limit, give each category a purpose, and pace everyday spending through the weeks. When plans change, move unused money between categories while keeping your original targets in view."
+      ]
+    },
+    {
+      "_id": "project-moodboard",
+      "slug": "moodboard",
+      "title": "Moodboard",
+      "category": "Visual boards",
+      "summary": "Collect images, notes, and links on a board you can arrange and share.",
+      "contribution": "Bring images, notes, and links together, arrange ideas your way, and share a board with someone else.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "NestJS",
+        "PostgreSQL",
+        "Docker",
+        "Object storage"
+      ],
+      "status": "Work in progress",
+      "order": 7,
+      "featured": false,
+      "gallery": [
+        {
+          "src": "/images/moodboard-board.png",
+          "alt": "Moodboard editor with a saved note, image, and reference link arranged on the canvas",
+          "width": 1280,
+          "height": 720,
+          "caption": "Images, notes, and links arranged on a Moodboard canvas."
+        }
+      ],
+      "sections": [
+        {
+          "_key": "boards",
+          "title": "Give related ideas a home",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "boards-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Put images, links, and notes beside one another, then move them around as the idea takes shape. Sections help group references without forcing every board into the same structure.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "boards-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I wanted collecting something to be a small action: paste a link, drop in an image, or write a note and keep going.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_key": "sharing",
+          "title": "Bring someone into the picture",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "sharing-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Share a board so someone else can see the references together. For client work, feedback and approvals can sit alongside the ideas being discussed.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "sharing-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "The aim is to make it easier to talk about a direction when everyone can see what it looks like.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/moodboard-landing.jpg",
+        "alt": "Moodboard landing page showing a sample board of room photographs, material references, and notes",
+        "width": 1429,
+        "height": 1848,
+        "caption": "Moodboard’s homepage."
+      },
+      "introduction": [
+        "Moodboard",
+        "I’m building Moodboard as a place for ideas that would otherwise end up scattered across tabs, screenshots, and notes.",
+        "Save images, add a thought, or keep a link on a board you can arrange your way. Use it for a room, a creative project, or whatever you are thinking through."
+      ]
+    },
+    {
+      "_id": "project-shortty",
+      "slug": "shortty",
+      "title": "Shortty",
+      "category": "Link utility",
+      "summary": "A small URL-shortening interface with a simple copy-and-share flow.",
+      "contribution": "Turn a long link into a shorter one that is easy to copy and share.",
+      "technologies": [
+        "React",
+        "CSS",
+        "REST APIs"
+      ],
+      "status": "Earlier work",
+      "order": 8,
+      "featured": false,
+      "gallery": [],
+      "sections": [
+        {
+          "_key": "links",
+          "title": "Keep sharing simple",
+          "body": [
+            {
+              "_type": "block",
+              "_key": "links-0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "I kept the interaction focused on the link: one place to paste it, a clear result, and an easy way to copy it.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "links-1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "It was a chance to work through a compact product experience, from entering a URL to sharing the result.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "cover": {
+        "src": "/images/shortty.png",
+        "alt": "Shortty URL-shortening interface",
+        "width": 1344,
+        "height": 657,
+        "caption": "Shortty’s link-shortening interface."
+      },
+      "introduction": [
+        "Shortty",
+        "Shortty is an earlier personal project built around a small, everyday task: making a long link easier to share.",
+        "Paste a URL, get a shorter link, and copy it without extra steps."
+      ]
+    }
+  ]
+}

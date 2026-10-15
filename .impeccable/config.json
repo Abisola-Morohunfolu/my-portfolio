@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/index.css"
+        ],
+        "createdAt": "2026-10-14T20:52:20.021Z",
+        "reason": "Agent: this border belongs exclusively to semantic rich-text blockquotes, rendered by RichText.tsx and exposed as Quote in the Studio schema; it is a quotation marker, not a card accent."
+      }
+    ]
+  }
+}
