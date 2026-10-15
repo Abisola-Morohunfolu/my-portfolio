@@ -37,6 +37,8 @@ Retain the existing Netlify project and domain. Link this repository/checkout to
 
 The repository's `netlify.toml` sets the command, output, Node version, connected-content requirement, and public identifiers for the Portfolio project (`wo8xbxgq`, dataset `production`). Deploy previews and production use that same published dataset. No Sanity token is needed in Netlify. Do not override production to fixture mode just to pass a build.
 
+Secret scanning excludes only the three public configuration keys above, since their values intentionally appear in source and rendered content. Keep all token and credential variables secret; scanning remains enabled for them.
+
 Create a Netlify build hook for the deployment branch. In Sanity Manage's API webhooks, configure a POST to that hook URL. Select create, update, and delete; leave draft/version triggers off. Use this filter:
 
 ```groq

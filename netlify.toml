@@ -7,6 +7,8 @@
   PORTFOLIO_CONTENT_SOURCE = "sanity"
   SANITY_PROJECT_ID = "wo8xbxgq"
   SANITY_DATASET = "production"
+  # These values identify public content; they are not authentication secrets.
+  SECRETS_SCAN_OMIT_KEYS = "PORTFOLIO_CONTENT_SOURCE,SANITY_PROJECT_ID,SANITY_DATASET"
 
 # Existing generated files take precedence. Unknown or unpublished routes return 404.
 [[redirects]]
