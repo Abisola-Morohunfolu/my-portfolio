@@ -35,7 +35,7 @@ Retain the existing Netlify project and domain. Link this repository/checkout to
 - Node: 24
 - Environment: `PORTFOLIO_CONTENT_SOURCE=sanity`, `SANITY_PROJECT_ID`, `SANITY_DATASET`
 
-The repository's `netlify.toml` already sets the command, output, Node version, and connected-content requirement. Set the two identifiers in the Netlify project. Do not override production to fixture mode just to pass a build.
+The repository's `netlify.toml` sets the command, output, Node version, connected-content requirement, and public identifiers for the Portfolio project (`wo8xbxgq`, dataset `production`). Deploy previews and production use that same published dataset. No Sanity token is needed in Netlify. Do not override production to fixture mode just to pass a build.
 
 Create a Netlify build hook for the deployment branch. In Sanity Manage's API webhooks, configure a POST to that hook URL. Select create, update, and delete; leave draft/version triggers off. Use this filter:
 

@@ -5,6 +5,8 @@
 [build.environment]
   NODE_VERSION = "24"
   PORTFOLIO_CONTENT_SOURCE = "sanity"
+  SANITY_PROJECT_ID = "wo8xbxgq"
+  SANITY_DATASET = "production"
 
 # Existing generated files take precedence. Unknown or unpublished routes return 404.
 [[redirects]]
