@@ -34,7 +34,7 @@ export type ProjectStatus =
   | 'Live product'
   | 'Prototype'
   | 'Work in progress'
-  | 'Local tool'
+  | 'Personal project'
   | 'Earlier work';
 
 export interface Project {

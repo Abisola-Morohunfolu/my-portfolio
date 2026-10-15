@@ -120,7 +120,9 @@ const project = defineType({
     }),
     defineField({
       name: 'contribution',
-      title: 'My contribution',
+      title: 'The work',
+      description:
+        'Describe what the project helps people do. Keep implementation details in Technologies.',
       type: 'text',
       rows: 3,
       validation: (rule) => rule.required(),
@@ -146,7 +148,7 @@ const project = defineType({
           'Live product',
           'Prototype',
           'Work in progress',
-          'Local tool',
+          'Personal project',
           'Earlier work',
         ],
       },
@@ -154,7 +156,7 @@ const project = defineType({
     }),
     defineField({
       name: 'statusNote',
-      title: 'Release status and limits',
+      title: 'Project note',
       type: 'text',
       rows: 3,
     }),

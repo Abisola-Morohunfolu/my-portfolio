@@ -635,9 +635,6 @@
   display: grid;
   gap: 15px;
 }
-.portfolio-preview .credits h2 {
-  font-size: 32px;
-}
 .portfolio-preview .case-gallery {
   display: grid;
   grid-template-columns: 2fr 1fr;

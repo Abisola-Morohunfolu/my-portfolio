@@ -79,6 +79,7 @@ export function validateProject(value: unknown): Project {
       'Live product',
       'Prototype',
       'Work in progress',
+      'Personal project',
       'Local tool',
       'Earlier work',
     ].includes(value.status as string)
@@ -130,7 +131,12 @@ export function validateProject(value: unknown): Project {
         throw new Error('Invalid rich text.');
     }
   }
-  return { ...value, gallery, sections } as unknown as Project;
+  return {
+    ...value,
+    status: value.status === 'Local tool' ? 'Personal project' : value.status,
+    gallery,
+    sections,
+  } as unknown as Project;
 }
 
 export function validateProfile(value: unknown): Profile {

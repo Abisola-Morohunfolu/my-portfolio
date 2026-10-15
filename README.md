@@ -16,6 +16,8 @@ The current checkout uses **local fixture content**, not a connected Sanity data
 
 Run `npm run check` for strict type checking, lint, content/rendering tests, a production build, and generated-artifact verification. Build output goes to `build/client`; the pre-existing untracked `dist/` and `server.js` are preserved.
 
+Pageviews and key link clicks use the existing Umami Cloud project. See [analytics](docs/analytics.md) for events, production-domain restrictions, and dashboard verification.
+
 The site supports `/`, `/projects`, and `/projects/:slug`. A Vite server entry renders every published route from one build-time snapshot. The client hydrates that exact snapshot, then refreshes published content; a failed refresh keeps the rendered content. Each route includes useful HTML, its own metadata, and a canonical URL. Unknown routes return an actual 404 rather than a successful SPA shell.
 
 ## Content and deployment

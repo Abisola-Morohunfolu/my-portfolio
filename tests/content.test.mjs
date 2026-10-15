@@ -41,7 +41,7 @@ await test('ordering, featured selection and direct slug lookup', () => {
   );
   assert.deepEqual(
     api.listProjects(shuffled, true).map((project) => project.slug),
-    ['equally-ai', 'testassessify', 'flowy', 'system-playground'],
+    ['equally-ai', 'testassessify', 'room-planner', 'flowy'],
   );
   assert.equal(api.getProject(shuffled, 'equally-ai').title, 'Equally.ai');
   assert.equal(api.getProject(shuffled, 'missing'), undefined);
@@ -72,7 +72,7 @@ await test('all routes render useful copy, approved intro and 404 without client
       equally.indexOf('id="reconciliation"'),
   );
   assert.doesNotMatch(equally, /locally stored|main branch|deployment is unverified/);
-  assert.match(equally, /Equally.ai engineering team/);
+  assert.doesNotMatch(equally, /With the team/);
   assert.match(api.render('/projects/unknown', snapshot), /404/);
   assert.equal(api.pageMetadata('/projects/unknown', snapshot).notFound, true);
   assert.equal(api.pageMetadata('/projects/', snapshot).notFound, false);
@@ -101,7 +101,7 @@ await test('empty collections, notes, missing images and optional fields render'
   assert.ok(api.render('/projects/equally-ai', content).includes('Equally.ai'));
   assert.deepEqual(content.projects[0].gallery, []);
 });
-await test('outcomes and credits render independently without case-study sections', () => {
+await test('outcomes render without sections and team credits stay hidden', () => {
   for (const sections of [undefined, []]) {
     for (const fields of [
       { impactEvidence: ['An independently supported outcome.'] },
@@ -125,11 +125,11 @@ await test('outcomes and credits render independently without case-study section
       );
       const html = api.render(`/projects/${project.slug}`, content);
       assert.equal(html.includes('What the work enables'), Boolean(fields.impactEvidence));
-      assert.equal(html.includes('With the team'), Boolean(fields.collaborators));
+      assert.doesNotMatch(html, /With the team/);
       for (const outcome of fields.impactEvidence ?? []) assert.ok(html.includes(outcome));
-      if (fields.collaborators) assert.ok(html.includes(fields.collaborators));
+      if (fields.collaborators) assert.ok(!html.includes(fields.collaborators));
       assert.doesNotMatch(html, /aria-label="In this case study"/);
-      assert.equal(html.includes('class="case-body"'), Object.keys(fields).length > 0);
+      assert.equal(html.includes('class="case-body"'), Boolean(fields.impactEvidence));
     }
   }
 });

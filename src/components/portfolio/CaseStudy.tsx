@@ -7,8 +7,7 @@ import { RichText } from './RichText';
 export function CaseStudy({ project }: { project: Project }) {
   const intro = project.introduction;
   const hasSections = project.sections.length > 0;
-  const hasBody =
-    hasSections || !!project.impactEvidence?.length || !!project.collaborators;
+  const hasBody = hasSections || !!project.impactEvidence?.length;
   return (
     <article className="case-study">
       <header className="case-header">
@@ -25,7 +24,7 @@ export function CaseStudy({ project }: { project: Project }) {
           </div>
           <dl className="project-facts">
             <div>
-              <dt>My contribution</dt>
+              <dt>The work</dt>
               <dd>{project.contribution}</dd>
             </div>
             <div>
@@ -45,6 +44,8 @@ export function CaseStudy({ project }: { project: Project }) {
               href={project.demoUrl}
               target="_blank"
               rel="noreferrer"
+              data-umami-event="project_demo_clicked"
+              data-umami-event-project={project.slug}
             >
               Visit product <span aria-hidden="true">↗</span>
             </a>
@@ -55,6 +56,8 @@ export function CaseStudy({ project }: { project: Project }) {
               href={project.sourceUrl}
               target="_blank"
               rel="noreferrer"
+              data-umami-event="project_source_clicked"
+              data-umami-event-project={project.slug}
             >
               View source <span aria-hidden="true">↗</span>
             </a>
@@ -122,12 +125,6 @@ export function CaseStudy({ project }: { project: Project }) {
                 </ul>
               </section>
             )}
-            {project.collaborators && (
-              <section className="case-section credits">
-                <h2>With the team</h2>
-                <p>{project.collaborators}</p>
-              </section>
-            )}
           </div>
         </div>
       )}
@@ -150,7 +147,7 @@ export function CaseStudy({ project }: { project: Project }) {
         <a className="text-link" href="/projects">
           ← Back to the collection
         </a>
-        <a className="text-link" href="/#contact">
+        <a className="text-link" href="/#contact" data-umami-event="contact_section_link_clicked" data-umami-event-location="case-study" data-umami-event-project={project.slug}>
           Get in touch <span aria-hidden="true">↗</span>
         </a>
       </div>

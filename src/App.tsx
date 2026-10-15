@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { getProject, listProjects, refreshContent } from './content/api';
-import type { ContentSnapshot, Project } from './content/types';
+import type { ContentSnapshot } from './content/types';
 import { pageMetadata } from './content/metadata';
 import { CaseStudy } from './components/portfolio/CaseStudy';
 import { ProjectImage } from './components/portfolio/ProjectImage';
+import { FeaturedWork } from './components/portfolio/FeaturedWork';
 
 function Navigation() {
   return (
@@ -15,114 +16,11 @@ function Navigation() {
       <nav aria-label="Main navigation">
         <a href="/#works">Works</a>
         <a href="/#skills">Skills</a>
-        <a href="/#contact">
+        <a href="/#contact" data-umami-event="contact_section_link_clicked" data-umami-event-location="navigation">
           Contact <span aria-hidden="true">↗</span>
         </a>
       </nav>
     </header>
-  );
-}
-
-function Viewer({ projects }: { projects: Project[] }) {
-  const [selected, setSelected] = useState(
-    projects.find((project) => project.slug === 'equally-ai')?.slug ??
-      projects[0]?.slug,
-  );
-  const active =
-    projects.find((project) => project.slug === selected) ?? projects[0];
-  const buttons = useRef<(HTMLButtonElement | null)[]>([]);
-  function onKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
-    let next = index;
-    if (event.key === 'ArrowDown' || event.key === 'ArrowRight')
-      next = (index + 1) % projects.length;
-    else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft')
-      next = (index - 1 + projects.length) % projects.length;
-    else if (event.key === 'Home') next = 0;
-    else if (event.key === 'End') next = projects.length - 1;
-    else return;
-    event.preventDefault();
-    setSelected(projects[next].slug);
-    buttons.current[next]?.focus();
-  }
-  if (!active)
-    return (
-      <p className="empty-state">
-        New work will appear here soon.{' '}
-        <Link to="/projects">Browse the collection</Link>.
-      </p>
-    );
-  return (
-    <div className="project-viewer">
-      <div className="viewer-menu">
-        <div
-          role="tablist"
-          aria-label="Selected projects"
-          aria-orientation="vertical"
-        >
-          {projects.map((project, index) => (
-            <button
-              key={project.slug}
-              ref={(element) => {
-                buttons.current[index] = element;
-              }}
-              id={`tab-${project.slug}`}
-              role="tab"
-              type="button"
-              aria-selected={active.slug === project.slug}
-              aria-controls="project-panel"
-              tabIndex={active.slug === project.slug ? 0 : -1}
-              onClick={() => setSelected(project.slug)}
-              onKeyDown={(event) => onKeyDown(event, index)}
-            >
-              <span className="project-number" aria-hidden="true">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span>
-                <span className="project-name">{project.title}</span>
-                <span className="project-category">{project.category}</span>
-              </span>
-              <span className="selection-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </button>
-          ))}
-        </div>
-        <Link className="collection-link text-link" to="/projects">
-          All projects <span aria-hidden="true">↗</span>
-        </Link>
-      </div>
-      <div
-        id="project-panel"
-        className="viewer-panel"
-        role="tabpanel"
-        aria-labelledby={`tab-${active.slug}`}
-        tabIndex={0}
-      >
-        <div className="viewer-media" key={active.slug} data-project={active.slug}>
-          {active.cover ? (
-            <ProjectImage
-              key={active.cover.src}
-              picture={{ ...active.cover, caption: undefined }}
-              priority
-            />
-          ) : (
-            <div className="media-missing">
-              {active.title}
-              <span>Case study</span>
-            </div>
-          )}
-        </div>
-        <div className="viewer-caption">
-          <div>
-            <p className="viewer-status">{active.status}</p>
-            <p className="viewer-summary">{active.summary}</p>
-          </div>
-          <Link className="case-link" to={`/projects/${active.slug}`}>
-            Read the story <span aria-hidden="true">↗</span>
-          </Link>
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -133,28 +31,37 @@ function Home({ snapshot }: { snapshot: ContentSnapshot }) {
   return (
     <>
       <section className="intro shell">
-        <p className="eyebrow">{profile.role}</p>
         <h1>
-          I'm Abisola. I build products <span>end to end.</span>
+          <span className="intro-name">I'm Abisola.</span>
+          I build products <span className="intro-emphasis">end to end.</span>
         </h1>
+        <div className="intro-aside">
+          <p>{profile.role}</p>
+          <a className="intro-scroll" href="#works" aria-label="Explore selected work">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v18M4 13l8 8 8-8" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </a>
+        </div>
       </section>
       <section
         id="works"
         className="selected-work shell"
         aria-labelledby="works-title"
       >
-        <h2 id="works-title" className="section-label">
-          Selected work
-        </h2>
-        <Viewer projects={projects} />
+        <div className="work-heading">
+          <h2 id="works-title">Selected work<span>.</span></h2>
+          <Link className="text-link" to="/projects" data-umami-event="all_projects_link_clicked" data-umami-event-location="selected-work">
+            All projects <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
+        <FeaturedWork projects={projects} />
       </section>
       <section
-        id="skills"
-        className="approach shell reveal"
+        className="approach shell"
         aria-labelledby="approach-title"
       >
         <div className="approach-heading">
-          <p className="section-label">How I work</p>
           <h2 id="approach-title">My approach.</h2>
           <p>{profile.biography}</p>
         </div>
@@ -203,8 +110,16 @@ function Home({ snapshot }: { snapshot: ContentSnapshot }) {
           </article>
         </div>
       </section>
+      <section id="skills" className="stack-section shell" aria-labelledby="stack-title">
+        <h2 id="stack-title">Across the stack<span>.</span></h2>
+        <dl className="stack-list">
+          <div><dt>Frontend</dt><dd>React / TypeScript / Material UI / Redux</dd></div>
+          <div><dt>Backend & data</dt><dd>Node.js / Express / NestJS / Hono / PostgreSQL / D1</dd></div>
+          <div><dt>AI & infrastructure</dt><dd>AWS Bedrock / Cloudflare Workers / Docker / Object storage</dd></div>
+        </dl>
+      </section>
       {!!profile.notes.length && (
-        <section className="notes shell reveal" aria-labelledby="notes-title">
+        <section className="notes shell" aria-labelledby="notes-title">
           <h2 id="notes-title">
             Builder's notes<span aria-hidden="true">.</span>
           </h2>
@@ -253,6 +168,9 @@ function Collection({ snapshot }: { snapshot: ContentSnapshot }) {
               <Link
                 className="project-card-link"
                 to={`/projects/${project.slug}`}
+                data-umami-event="project_card_clicked"
+                data-umami-event-project={project.slug}
+                data-umami-event-location="collection"
               >
                 {project.cover && (
                   <ProjectImage
@@ -317,7 +235,7 @@ function Contact({ snapshot }: { snapshot: ContentSnapshot }) {
       <h2>
         Let's talk<span>.</span>
       </h2>
-      <a className="contact-email" href={`mailto:${profile.email}`}>
+      <a className="contact-email" href={`mailto:${profile.email}`} data-umami-event="contact_email_clicked">
         {profile.email} <span aria-hidden="true">↗</span>
       </a>
       <div className="footer-bottom">
@@ -326,10 +244,10 @@ function Contact({ snapshot }: { snapshot: ContentSnapshot }) {
           <span>© {new Date(snapshot.generatedAt).getUTCFullYear()}</span>
         </p>
         <div>
-          <a href={profile.github} target="_blank" rel="noreferrer">
+          <a href={profile.github} target="_blank" rel="noreferrer" data-umami-event="github_profile_clicked" data-umami-event-platform="github">
             GitHub <span aria-hidden="true">↗</span>
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer">
+          <a href={profile.linkedin} target="_blank" rel="noreferrer" data-umami-event="linkedin_profile_clicked" data-umami-event-platform="linkedin">
             LinkedIn <span aria-hidden="true">↗</span>
           </a>
           <a href="#top">Back to top ↑</a>
