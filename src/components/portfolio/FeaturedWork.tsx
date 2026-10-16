@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Picture, Project } from '../../content/types';
 import { ProjectImage } from './ProjectImage';
+import { imageSizes } from '../../utils/responsiveImages';
 
 function Arrow() {
   return (
@@ -29,7 +30,11 @@ function ProjectSpread({ project, index }: { project: Project; index: number }) 
         <Link className="work-image-link" to={`/projects/${project.slug}`} aria-label={`Explore ${project.title}`} data-umami-event="project_image_clicked" data-umami-event-project={project.slug} data-umami-event-location="featured-image">
           <div className="work-image" key={picture?.src ?? project.slug}>
             {picture ? (
-              <ProjectImage picture={{ ...picture, caption: undefined }} priority={index === 0} />
+              <ProjectImage
+                picture={{ ...picture, caption: undefined }}
+                priority={index === 0 && pictureIndex === 0}
+                sizes={index === 0 || (index + 1) % 4 === 0 ? imageSizes.featuredWide : imageSizes.featuredCard}
+              />
             ) : (
               <div className="media-missing">{project.title}<span>Case study</span></div>
             )}

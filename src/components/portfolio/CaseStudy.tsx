@@ -1,6 +1,7 @@
 import type { Project } from '../../content/types';
 import { ProjectImage } from './ProjectImage';
 import { RichText } from './RichText';
+import { imageSizes } from '../../utils/responsiveImages';
 
 // This renderer is shared by published routes and the authenticated Studio view.
 // Plain anchors keep it usable without a router in Studio and without JavaScript.
@@ -72,6 +73,7 @@ export function CaseStudy({ project }: { project: Project }) {
           <ProjectImage
             key={project.cover.src}
             picture={project.cover}
+            sizes={imageSizes.full}
             priority
           />
         </div>
@@ -111,6 +113,7 @@ export function CaseStudy({ project }: { project: Project }) {
                   <ProjectImage
                     key={section.image.src}
                     picture={section.image}
+                    sizes={imageSizes.caseBody}
                   />
                 )}
               </section>
@@ -130,8 +133,12 @@ export function CaseStudy({ project }: { project: Project }) {
       )}
       {!!project.gallery.length && (
         <section className="case-gallery" aria-label="Project screenshots">
-          {project.gallery.map((picture) => (
-            <ProjectImage key={picture.src} picture={picture} />
+          {project.gallery.map((picture, index) => (
+            <ProjectImage
+              key={picture.src}
+              picture={picture}
+              sizes={project.gallery.length === 1 ? imageSizes.full : index === 1 ? imageSizes.gallerySecond : index % 2 === 0 ? imageSizes.galleryWide : imageSizes.galleryNarrow}
+            />
           ))}
         </section>
       )}

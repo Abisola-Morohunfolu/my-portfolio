@@ -6,6 +6,7 @@ import { pageMetadata } from './content/metadata';
 import { CaseStudy } from './components/portfolio/CaseStudy';
 import { ProjectImage } from './components/portfolio/ProjectImage';
 import { FeaturedWork } from './components/portfolio/FeaturedWork';
+import { imageSizes } from './utils/responsiveImages';
 
 function Navigation() {
   return (
@@ -147,6 +148,7 @@ function Home({ snapshot }: { snapshot: ContentSnapshot }) {
 
 function Collection({ snapshot }: { snapshot: ContentSnapshot }) {
   const projects = listProjects(snapshot);
+  const firstCoverIndex = projects.findIndex((project) => Boolean(project.cover));
   return (
     <section className="collection shell">
       <header className="collection-header">
@@ -160,7 +162,7 @@ function Collection({ snapshot }: { snapshot: ContentSnapshot }) {
       </header>
       {projects.length ? (
         <div className="collection-grid">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article
               className={`collection-project ${project.cover ? '' : 'text-project'}`}
               key={project.slug}
@@ -176,6 +178,8 @@ function Collection({ snapshot }: { snapshot: ContentSnapshot }) {
                   <ProjectImage
                     key={project.cover.src}
                     picture={{ ...project.cover, caption: undefined }}
+                    sizes={imageSizes.collection}
+                    priority={index === firstCoverIndex}
                   />
                 )}
                 <div className="collection-project-heading">

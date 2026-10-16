@@ -1,0 +1,140 @@
+{
+  "baseline-preview": {
+    "environment": {
+      "contentHash": "c4cb4fa31f69b30f53c057402d685ace0f116f9ae6595f1bd3a53956ffa0e4db",
+      "lighthouseVersion": "13.5.0",
+      "runsPerScenario": 3
+    },
+    "scenarios": {
+      "home-mobile": {
+        "performance": 86,
+        "scores": [
+          86,
+          86,
+          87
+        ],
+        "fcpMs": 1509.3618,
+        "lcpMs": 4090.4314999999992,
+        "tbtMs": 0,
+        "cls": 0.0005649105110533613,
+        "imageBytes": 795218,
+        "transferBytes": 1016305,
+        "representativeReport": "baseline-preview/home-mobile-1.report.html"
+      },
+      "home-desktop": {
+        "performance": 92,
+        "scores": [
+          90,
+          93,
+          92
+        ],
+        "fcpMs": 374.35380000000004,
+        "lcpMs": 1848.1772999999998,
+        "tbtMs": 0,
+        "cls": 0.00065384423397361,
+        "imageBytes": 795180,
+        "transferBytes": 1016270,
+        "representativeReport": "baseline-preview/home-desktop-3.report.html"
+      },
+      "projects-mobile": {
+        "performance": 86,
+        "scores": [
+          86,
+          87,
+          86
+        ],
+        "fcpMs": 1507.1856,
+        "lcpMs": 4208.74985,
+        "tbtMs": 0,
+        "cls": 0.001950694991092009,
+        "imageBytes": 1265933,
+        "transferBytes": 1486350,
+        "representativeReport": "baseline-preview/projects-mobile-3.report.html"
+      },
+      "case-study-mobile": {
+        "performance": 99,
+        "scores": [
+          99,
+          99,
+          99
+        ],
+        "fcpMs": 1508.8896,
+        "lcpMs": 1658.8896,
+        "tbtMs": 0,
+        "cls": 0.03716289479906991,
+        "imageBytes": 244186,
+        "transferBytes": 464466,
+        "representativeReport": "baseline-preview/case-study-mobile-2.report.html"
+      }
+    }
+  },
+  "after-images": {
+    "environment": {
+      "contentHash": "c4cb4fa31f69b30f53c057402d685ace0f116f9ae6595f1bd3a53956ffa0e4db",
+      "lighthouseVersion": "13.5.0",
+      "runsPerScenario": 3
+    },
+    "scenarios": {
+      "home-mobile": {
+        "performance": 97,
+        "scores": [
+          97,
+          97,
+          98
+        ],
+        "fcpMs": 1505.5281,
+        "lcpMs": 2414.48235,
+        "tbtMs": 0,
+        "cls": 0.0005649105110533613,
+        "imageBytes": 53170,
+        "transferBytes": 275162,
+        "representativeReport": "after-images/home-mobile-3.report.html"
+      },
+      "home-desktop": {
+        "performance": 99,
+        "scores": [
+          99,
+          99,
+          99
+        ],
+        "fcpMs": 366.4488,
+        "lcpMs": 950.8885,
+        "tbtMs": 0,
+        "cls": 0.00065384423397361,
+        "imageBytes": 62165,
+        "transferBytes": 284157,
+        "representativeReport": "after-images/home-desktop-2.report.html"
+      },
+      "projects-mobile": {
+        "performance": 98,
+        "scores": [
+          97,
+          98,
+          98
+        ],
+        "fcpMs": 1505.8056000000001,
+        "lcpMs": 2406.4329,
+        "tbtMs": 0,
+        "cls": 0.001950694991092009,
+        "imageBytes": 148688,
+        "transferBytes": 370159,
+        "representativeReport": "after-images/projects-mobile-1.report.html"
+      },
+      "case-study-mobile": {
+        "performance": 99,
+        "scores": [
+          99,
+          99,
+          99
+        ],
+        "fcpMs": 1507.08915,
+        "lcpMs": 1657.08915,
+        "tbtMs": 0,
+        "cls": 0.03716289479906991,
+        "imageBytes": 15831,
+        "transferBytes": 236874,
+        "representativeReport": "after-images/case-study-mobile-2.report.html"
+      }
+    }
+  }
+}

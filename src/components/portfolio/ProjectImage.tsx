@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import type { Picture } from '../../content/types';
+import { responsiveImage } from '../../utils/responsiveImages';
 
 export function ProjectImage({
   picture,
   priority = false,
+  sizes = '100vw',
 }: {
   picture: Picture;
   priority?: boolean;
+  sizes?: string;
 }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -21,11 +24,14 @@ export function ProjectImage({
           </p>
         ) : (
           <img
-            src={picture.src}
+            {...responsiveImage(picture)}
+            sizes={sizes}
             alt={picture.alt}
             width={picture.width}
             height={picture.height}
             loading={priority ? 'eager' : 'lazy'}
+            // React 18 forwards the lowercase attribute without an unknown-prop warning.
+            {...(priority ? { fetchpriority: 'high' } : {})}
             decoding="async"
             onError={() => setFailed(true)}
           />

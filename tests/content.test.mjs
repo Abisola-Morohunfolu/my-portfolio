@@ -14,6 +14,77 @@ await build({
 const api = await import('../build/tests/entry-server.mjs');
 const seed = JSON.parse(await readFile('public/content-snapshot.json', 'utf8'));
 const snapshot = api.normalizeContent(seed, 'fixture');
+await build({
+  logLevel: 'silent',
+  build: {
+    ssr: 'src/utils/responsiveImages.ts',
+    outDir: 'build/image-tests',
+    emptyOutDir: true,
+  },
+});
+const { responsiveImage, imageSizes } = await import('../build/image-tests/responsiveImages.mjs');
+
+await test('responsive Sanity variants preserve source parameters and never upscale', () => {
+  const picture = { ...seed.projects[0].cover,
+    src: 'https://cdn.sanity.io/images/example/production/image-1265x712.jpg?rect=0,0,1200,700' };
+  for (const width of [180, 320, 725, 1265, 1728]) {
+    const image = responsiveImage({ ...picture, width });
+    const variants = image.srcSet.split(', ');
+    const expectedWidths = [...new Set([320, 480, 640, 800, 960, 1280, 1600].map(w => Math.min(w, width)))];
+    assert.deepEqual(variants.map(variant => Number(variant.split(' ')[1].slice(0, -1))), expectedWidths);
+    for (const variant of variants) {
+      const url = new URL(variant.split(' ')[0]);
+      assert.equal(url.searchParams.get('rect'), '0,0,1200,700');
+      assert.equal(url.searchParams.get('auto'), 'format');
+      assert.equal(url.searchParams.get('fit'), 'max');
+      assert.equal(url.searchParams.get('q'), '85');
+      assert.ok(Number(url.searchParams.get('w')) <= width);
+    }
+    assert.equal(new URL(image.src).searchParams.get('w'), String(Math.min(960, width)));
+  }
+  for (const src of ['/equally.png', 'https://example.com/image.png', 'https://cdn.sanity.io.evil.example/images/a.png', 'https://cdn.sanity.io/files/a.pdf']) {
+    assert.deepEqual(responsiveImage({ ...picture, src }), { src });
+  }
+});
+
+await test('rendered image placements retain dimensions and identify the initial covers', () => {
+  const imageTags = (html) => [...html.matchAll(/<img\b[^>]*>/g)].map(match => match[0]);
+  const home = imageTags(api.render('/', snapshot));
+  assert.match(home[0], /loading="eager"/);
+  assert.match(home[0], /fetchpriority="high"/);
+  assert.ok(home[0].includes(`sizes="${imageSizes.featuredWide}"`));
+  assert.ok(home[1].includes(`sizes="${imageSizes.featuredCard}"`));
+  assert.ok(home.slice(1).every(tag => tag.includes('loading="lazy"') && !tag.includes('fetchpriority')));
+  const collection = imageTags(api.render('/projects', snapshot));
+  assert.match(collection[0], /loading="eager"/);
+  assert.match(collection[0], /fetchpriority="high"/);
+  assert.ok(collection.every(tag => tag.includes(`sizes="${imageSizes.collection}"`)));
+  assert.ok(collection.slice(1).every(tag => tag.includes('loading="lazy"')));
+  const firstMissing = structuredClone(seed);
+  delete firstMissing.projects[0].cover;
+  const reordered = imageTags(api.render('/projects', api.normalizeContent(firstMissing, 'fixture')));
+  assert.match(reordered[0], /fetchpriority="high"/);
+  const illustrated = structuredClone(seed);
+  illustrated.projects[0].sections[0].image = illustrated.projects[0].cover;
+  illustrated.projects[0].gallery = Array(4).fill(illustrated.projects[0].cover);
+  const cases = imageTags(api.render('/projects/equally-ai', api.normalizeContent(illustrated, 'fixture')));
+  assert.ok(cases[0].includes(`sizes="${imageSizes.full}"`));
+  assert.match(cases[0], /loading="eager"/);
+  assert.ok(cases.some(tag => tag.includes(`sizes="${imageSizes.caseBody}"`)));
+  for (const sizes of [imageSizes.galleryWide, imageSizes.gallerySecond, imageSizes.galleryNarrow]) {
+    assert.ok(cases.some(tag => tag.includes(`sizes="${sizes}"`)));
+  }
+  assert.ok(cases[0].includes(`width="${seed.projects[0].cover.width}"`));
+  assert.ok(cases[0].includes(`height="${seed.projects[0].cover.height}"`));
+  const connected = structuredClone(seed);
+  connected.projects[0].cover.src = 'https://cdn.sanity.io/images/example/production/image-1728x961.png';
+  const optimized = imageTags(api.render('/', api.normalizeContent(connected, 'sanity')))[0];
+  assert.match(optimized, /srcSet="https:\/\/cdn\.sanity\.io/);
+  assert.match(optimized, /auto=format/);
+  // Local fixture assets continue to use their original URLs without CDN variants.
+  assert.ok(home[0].includes(`src="${seed.projects[0].cover.src}"`));
+  assert.doesNotMatch(home[0], /srcSet=/);
+});
 
 await test('published reads explicitly exclude drafts and releases', () => {
   const url = new URL(
