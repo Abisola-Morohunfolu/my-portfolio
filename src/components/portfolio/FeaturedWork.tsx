@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { Picture, Project } from '../../content/types';
 import { ProjectImage } from './ProjectImage';
-import { imageSizes } from '../../utils/responsiveImages';
+import { featuredImageSizes } from '../../utils/responsiveImages';
 
 function Arrow() {
   return (
@@ -33,7 +33,7 @@ function ProjectSpread({ project, index }: { project: Project; index: number }) 
               <ProjectImage
                 picture={{ ...picture, caption: undefined }}
                 priority={index === 0 && pictureIndex === 0}
-                sizes={index === 0 || (index + 1) % 4 === 0 ? imageSizes.featuredWide : imageSizes.featuredCard}
+                sizes={featuredImageSizes(picture, index === 0 || (index + 1) % 4 === 0)}
               />
             ) : (
               <div className="media-missing">{project.title}<span>Case study</span></div>

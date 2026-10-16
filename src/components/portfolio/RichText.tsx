@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { safeUrl } from '../../content/api';
+import { safeUrl } from '../../content/helpers';
 import type { TextBlock } from '../../content/types';
 
 function blockText(block: TextBlock): ReactNode {

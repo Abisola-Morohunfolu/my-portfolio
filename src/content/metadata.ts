@@ -1,4 +1,4 @@
-import { getProject } from './api';
+import { getProject } from './helpers';
 import type { ContentSnapshot } from './types';
 
 export const SITE_URL = 'https://abisola.xyz';

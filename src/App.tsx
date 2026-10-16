@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom';
-import { getProject, listProjects, refreshContent } from './content/api';
+import { getProject, listProjects } from './content/helpers';
+import { refreshClientContent } from './content/client';
 import type { ContentSnapshot } from './content/types';
 import { pageMetadata } from './content/metadata';
 import { CaseStudy } from './components/portfolio/CaseStudy';
@@ -336,11 +337,27 @@ export default function App({
   const [snapshot, setSnapshot] = useState(initialSnapshot);
   useEffect(() => {
     let active = true;
-    void refreshContent(initialSnapshot).then((content) => {
-      if (active) setSnapshot(content);
-    });
+    let idleId: number | undefined;
+    let timerId: number | undefined;
+    const refresh = () => {
+      void refreshClientContent(initialSnapshot).then((content) => {
+        if (active) setSnapshot(content);
+      });
+    };
+    const scheduleRefresh = () => {
+      if (typeof window.requestIdleCallback === 'function')
+        idleId = window.requestIdleCallback(refresh, { timeout: 1000 });
+      else timerId = window.setTimeout(refresh, 0);
+    };
+    // The published snapshot already renders the page. Give initial assets and
+    // painting priority before downloading the optional background module.
+    if (document.readyState === 'complete') scheduleRefresh();
+    else window.addEventListener('load', scheduleRefresh, { once: true });
     return () => {
       active = false;
+      window.removeEventListener('load', scheduleRefresh);
+      if (idleId !== undefined) window.cancelIdleCallback(idleId);
+      if (timerId !== undefined) window.clearTimeout(timerId);
     };
   }, [initialSnapshot]);
   return (

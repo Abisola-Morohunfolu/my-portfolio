@@ -5,6 +5,8 @@ import type {
   Profile,
   PublicCmsConfig,
 } from './types';
+import { safeUrl } from './helpers';
+export { safeUrl, getProject, listProjects } from './helpers';
 
 export const API_VERSION = '2026-03-01';
 export const PROJECT_FIELDS = `_id,"slug":slug.current,title,category,summary,contribution,introduction,technologies,status,statusNote,order,featured,
@@ -16,19 +18,6 @@ export const PUBLISHED_QUERY = `{
   "projects": *[_type == "project" && !(_id in path("drafts.**")) && !(_id in path("versions.**"))] | order(order asc, title asc) {${PROJECT_FIELDS}},
   "profile": *[_type == "profile" && _id == "profile"][0]{_id,name,role,biography,email,github,linkedin,notes}
 }`;
-
-export function safeUrl(
-  value: unknown,
-  allowRelative = false,
-): value is string {
-  if (typeof value !== 'string') return false;
-  if (allowRelative && /^\/(?!\/)/.test(value)) return true;
-  try {
-    return new URL(value).protocol === 'https:';
-  } catch {
-    return false;
-  }
-}
 
 function record(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -232,22 +221,6 @@ export async function fetchPublishedContent(
     throw new Error(`Sanity published read failed (${response.status}).`);
   const data = (await response.json()) as { result?: unknown };
   return normalizeContent(data.result, 'sanity', config);
-}
-
-export function listProjects(
-  snapshot: ContentSnapshot,
-  featuredOnly = false,
-): Project[] {
-  return snapshot.projects.filter(
-    (project) => !featuredOnly || project.featured,
-  );
-}
-
-export function getProject(
-  snapshot: ContentSnapshot,
-  slug: string,
-): Project | undefined {
-  return snapshot.projects.find((project) => project.slug === slug);
 }
 
 export async function refreshContent(
